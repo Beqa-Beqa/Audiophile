@@ -9,18 +9,25 @@ from './Design/Homepage/export';
 import MiniSecContainer from './Containers/MiniSecContainer';
 import HomeBodySection from './Components/HomeBodySection';
 
+let navCreator = () => {
+    return (
+        <nav className="navigation">
+            <a href="#">Home</a>
+            <a href="#">Headphones</a>
+            <a href="#">Speakers</a>
+            <a href="#">Earphones</a>
+        </nav>
+    );
+}
+let nav = navCreator();
+
 function App() {
     return (
         <div className='app'>
             <div className='app__header'>
                 <div className='app__header-nav'>
                     <img src={Audiophile} alt="logo" />
-                    <nav id="nav">
-                        <a href="#">Home</a>
-                        <a href="#">Headphones</a>
-                        <a href="#">Speakers</a>
-                        <a href="#">Earphones</a>
-                    </nav>
+                    {nav}
                     <img src={ShoppingCart} />
                 </div>
                 <div className='app__header-description'>
@@ -39,6 +46,23 @@ function App() {
                 path={Path} speakers={Speakers} 
                 />
                 <HomeBodySection personimg={HumanImg} speaker={SpeakerTop} earphones={BigEarphones} />
+            </div>
+            <div className='app__footer' >
+                <div className='app__footer-about'>
+                    <div>
+                        <img src={Audiophile} alt="logo" />
+                    </div>
+                    <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
+                    <span>Copyright 2021. All Rights Reserved</span>
+                </div>
+                <div className='footer__nav'>
+                    {nav}
+                    <div id="icons">
+                        <img src={Fb} alt="facebook icon" />
+                        <img src={Twit} alt="twitter icon" />
+                        <img src={Insta} alt="instagram icon" />
+                    </div>
+                </div>
             </div>
         </div>
   );

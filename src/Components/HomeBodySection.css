@@ -146,6 +146,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-right: 3rem;
 }
 
 #about__description h1 {
@@ -155,7 +156,7 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
     color: #000;
-    inline-size: 450px;
+    inline-size: 400px;
     margin-bottom: 2rem;
 }
 
@@ -169,7 +170,7 @@
     line-height: 25px;
     color: #000;
     opacity: .5;
-    inline-size: 450px;
+    inline-size: 400px;
 }
 
 @media screen and (max-width: 1600px) {
