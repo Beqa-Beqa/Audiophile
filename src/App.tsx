@@ -1,15 +1,14 @@
 import './App.css';
 import 
-    { Audiophile, BackSpeakerTop, BigEarphones,
-    Earphones, Fb, Headphones, HumanImg, Insta, IntroHeadphones,
-    Path, ShoppingCart, SpeakerBottom, SpeakerTop, Speakers,
-    Twit
-    } 
+    { Audiophile, BigEarphones,
+    Earphones, Headphones, HumanImg, IntroHeadphones,
+    Path, ShoppingCart, SpeakerTop, Speakers} 
 from './Design/Homepage/export';
 import MiniSecContainer from './Containers/MiniSecContainer';
 import HomeBodySection from './Components/HomeBodySection';
+import Footer from './Components/Footer';
 
-let navCreator = () => {
+export function navCreator() {
     return (
         <nav className="navigation">
             <a href="#">Home</a>
@@ -47,22 +46,8 @@ function App() {
                 />
                 <HomeBodySection personimg={HumanImg} speaker={SpeakerTop} earphones={BigEarphones} />
             </div>
-            <div className='app__footer' >
-                <div className='app__footer-about'>
-                    <div>
-                        <img src={Audiophile} alt="logo" />
-                    </div>
-                    <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
-                    <span>Copyright 2021. All Rights Reserved</span>
-                </div>
-                <div className='footer__nav'>
-                    {nav}
-                    <div id="icons">
-                        <img src={Fb} alt="facebook icon" />
-                        <img src={Twit} alt="twitter icon" />
-                        <img src={Insta} alt="instagram icon" />
-                    </div>
-                </div>
+            <div className='app__sections-footer'>
+                <Footer nav={nav}/>
             </div>
         </div>
   );

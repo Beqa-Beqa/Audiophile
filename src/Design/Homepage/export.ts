@@ -1,5 +1,4 @@
 export {default as Audiophile} from './Audiophile.svg';
-export {default as BackSpeakerTop} from './BackSpeakerTop.svg';
 export {default as BigEarphones} from './BigEarphones.svg';
 export {default as Earphones} from './Earphones.svg';
 export {default as Fb} from './Fb.svg';

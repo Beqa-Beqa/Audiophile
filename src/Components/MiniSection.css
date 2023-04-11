@@ -12,6 +12,18 @@
     align-items: center;
 }
 
+#image-div::after {
+    display: block;
+    content: "";
+    width: 100px;
+    height: 20px;
+    background: #000;
+    filter: blur(21px);
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 15px;
+}
+
 .mini-section__description {
     position: relative;
     top: -5rem;
