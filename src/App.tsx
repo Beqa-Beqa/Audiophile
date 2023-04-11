@@ -28,7 +28,7 @@ function App() {
                 <div className='app__header-nav'>
                     <img src={Audiophile} alt="logo" />
                     {nav}
-                    <img src={ShoppingCart} />
+                    <img id="shopping-cart" src={ShoppingCart} />
                 </div>
                 <div className='app__header-description'>
                     <div className='app__header-description__text'>

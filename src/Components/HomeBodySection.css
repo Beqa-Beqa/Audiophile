@@ -48,8 +48,26 @@
     inline-size: 350px;
 }
 
+.product-button {
+    border: none;
+    width: 160px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "Manrope";
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 1rem 0;
+}
+
 #speaker-top__description .product-button {
     background: #000;
+}
+
+#speaker-top__description .product-button:hover {
+    background: #4C4C4C;
+    cursor: pointer;
 }
 
 #speaker-bottom {
@@ -79,6 +97,13 @@
     background: transparent;
     border: 1px solid #000;
     color: #000;
+}
+
+#speaker-bottom__description .product-button:hover,
+#earphones__description-text .product-button:hover {
+    cursor: pointer;
+    background: #000;
+    color: #FFF;
 }
 
 #earphones {

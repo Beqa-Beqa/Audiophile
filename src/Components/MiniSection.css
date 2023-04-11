@@ -50,3 +50,12 @@
     color: #000;
     opacity: .5;
 }
+
+#button-div:hover {
+    cursor: pointer;
+}
+
+#button-div:hover > span {
+    color: #D87D4A;
+    opacity: 1;
+}

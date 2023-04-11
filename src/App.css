@@ -66,6 +66,11 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.app__header-nav #shopping-cart:hover {
+    filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
+    cursor: pointer;
+}
+
 .navigation {
     margin-right: 5rem;
 }
@@ -79,6 +84,11 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 1rem;
+}
+
+.navigation a:hover {
+    cursor: pointer;
+    color: #D87D4A;
 }
 
 .app__header-description {
@@ -127,9 +137,17 @@ body {
     inline-size: 350px;
 }
 
+.app__header-description__text .product-button {
+    background: #D87D4A;
+}
+
+.app__header-description__text .product-button:hover {
+    background: #FBAF85;
+    cursor: pointer;
+}
+
 .product-button {
     border: none;
-    background: #D87D4A;
     width: 160px;
     font-size: 13px;
     font-weight: 700;
@@ -193,6 +211,11 @@ body {
 
 #icons img {
     margin-left: 1rem;
+}
+
+#icons img:hover {
+    filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1110px) {
