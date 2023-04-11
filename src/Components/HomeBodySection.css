@@ -1,0 +1,135 @@
+.app__sections-body {
+    display: grid;
+    grid-template-rows: 560px 320px minmax(0, 1fr);
+    grid-gap: 2rem;
+}
+
+#speaker-top {
+    background: #D87D4A;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 2rem;
+    height: 560px;
+    background-image: url("../Design/Homepage/Circles.svg");
+    background-repeat: no-repeat;
+}
+
+#speaker {
+    position: relative;
+    right: 5rem;
+}
+
+#speaker-top__description {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+#speaker-top__description h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+#speaker-top__description p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFF;
+    opacity: .75; 
+    inline-size: 350px;
+}
+
+#speaker-top__description .product-button {
+    background: #000;
+}
+
+#speaker-bottom {
+    background-image: url("../Design/Homepage/SpeakerBottom.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#speaker-bottom__description {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5rem 0 0 5rem;
+}
+
+#speaker-bottom__description h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#speaker-bottom__description .product-button {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+
+#earphones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+#earphones-img {
+    width: 100%;
+}
+
+#earphones-img img {
+    width: 100%;
+}
+
+#earphones__description {
+    background: #F1F1F1;
+    border-radius: 8px;
+    height: 98.5%;
+    display: flex;
+    align-items: center;
+}
+
+#earphones__description-text {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 5rem;
+}
+
+#earphones__description-text h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#earphones__description-text .product-button {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+
+@media screen and (max-width: 1600px) {
+    #speaker {
+        position: initial;
+    }
+}
