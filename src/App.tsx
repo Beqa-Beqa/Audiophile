@@ -38,7 +38,7 @@ function App() {
                 earphones={Earphones} headphones={Headphones}
                 path={Path} speakers={Speakers} 
                 />
-                <HomeBodySection speaker={SpeakerTop} earphones={BigEarphones} />
+                <HomeBodySection personimg={HumanImg} speaker={SpeakerTop} earphones={BigEarphones} />
             </div>
         </div>
   );
