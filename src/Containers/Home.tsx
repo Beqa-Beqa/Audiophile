@@ -37,7 +37,7 @@ let Home = (props: {nav: JSX.Element}) => {
             <About />
         </div>
         <div className='app__sections-footer'>
-            <Footer nav={props.nav}/>
+            <Footer />
         </div>
     </div>
     );

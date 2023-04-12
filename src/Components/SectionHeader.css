@@ -18,3 +18,8 @@
     color: #FFF;
     margin: 5rem 0 3rem 0;
 }
+
+#shop-cart:hover {
+    cursor: pointer;
+    filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
+}

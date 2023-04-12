@@ -9,7 +9,7 @@ let SectionHeader = (props: {description: string}) => {
             <div className="app__section-header-nav">
                 <img src={Audiophile} alt="logo" />
                 {nav}
-                <img src={ShoppingCart} alt="shopping cart" />
+                <img id="shop-cart" src={ShoppingCart} alt="shopping cart" />
             </div>
             <h1 className="header">{props.description}</h1>
         </div>

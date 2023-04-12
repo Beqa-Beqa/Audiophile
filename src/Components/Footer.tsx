@@ -1,7 +1,9 @@
 import "./Footer.css";
 import {Audiophile, Fb, Twit, Insta} from "../Design/Homepage/export"
+import { navCreator } from "../App";
 
-let Footer = (props: {nav: JSX.Element;}) => {
+let Footer = () => {
+    let nav = navCreator();
     return (
     <div className='app__footer' >
         <div className='app__footer-about'>
@@ -12,7 +14,7 @@ let Footer = (props: {nav: JSX.Element;}) => {
             <span>Copyright 2021. All Rights Reserved</span>
         </div>
         <div className='footer__nav'>
-            {props.nav}
+            {nav}
             <div id="icons">
                 <img src={Fb} alt="facebook icon" />
                 <img src={Twit} alt="twitter icon" />
