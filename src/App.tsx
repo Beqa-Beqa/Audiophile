@@ -2,6 +2,8 @@ import './App.css';
 import Home from './Containers/Home';
 import {Routes, Route, Link} from "react-router-dom";
 import Headphones from './Containers/Headphones';
+import Speakers from './Containers/Speakers';
+import Earphones from './Containers/Earphones';
 
 export function navCreator() {
     return (
@@ -20,6 +22,8 @@ function App() {
             <Routes>
                 <Route path="/" element={ <Home nav={navCreator()}/> } />
                 <Route path="/headphones" element={ <Headphones /> } />
+                <Route path="/speakers" element={<Speakers />} />
+                <Route path="/earphones" element={<Earphones />} />
             </Routes>
         </div>
   );

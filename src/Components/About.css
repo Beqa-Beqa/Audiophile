@@ -6,14 +6,17 @@
     align-items: center;
 }
 
-#about__image,
+#about__image {
+    width: 40%;
+}
+
 #about__image img {
     width: 100%;
     border-radius: 8px;
 }
 
 #about__description {
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,8 +31,8 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
     color: #000;
-    inline-size: 400px;
     margin-bottom: 2rem;
+    inline-size: initial;
 }
 
 #about__description h1 span {
@@ -42,5 +45,6 @@
     line-height: 25px;
     color: #000;
     opacity: .5;
-    inline-size: 400px;
+    inline-size: initial;
+    min-inline-size: 200px;
 }

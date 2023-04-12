@@ -1,0 +1,1 @@
+export {default as EarphoneOne} from "./EarphoneOne.svg";
