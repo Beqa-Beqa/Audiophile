@@ -53,3 +53,9 @@
     filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
     cursor: pointer;
 }
+
+@media screen and (min-width: 1440px) {
+    .app__footer {
+        padding: 7vh 15vw;
+    }
+}

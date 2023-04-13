@@ -7,13 +7,14 @@
 #speaker-top {
     background: #D87D4A;
     border-radius: 8px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
     padding: 0 2rem;
-    height: 560px;
-    background-image: url("../Design/Homepage/Circles.svg");
+    height: auto;
+    background-image: url("../Design/Homepage/SpeakerTop.svg"), url("../Design/Homepage/Circles.svg");
+    background-position: left 7rem bottom 0, left bottom;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #speaker {
@@ -22,12 +23,11 @@
 }
 
 #speaker-top__description {
-    height: 350px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4rem;
 }
 
 #speaker-top__description h1 {
@@ -46,6 +46,7 @@
     color: #FFF;
     opacity: .75; 
     inline-size: 350px;
+    margin: 2rem 0;
 }
 
 .product-button {

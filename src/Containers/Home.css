@@ -1,6 +1,6 @@
 .app__header {
     background: #141313;
-    padding: 1.5rem 20vw;
+    padding: 1.5rem 10vw;
     color: #FFF;
     margin-bottom: 5rem;
 }
@@ -92,11 +92,20 @@
 }
 
 .app__sections {
-    padding: 0 20vw;
+    padding: 0 10vw;
 }
 
 @media screen and (max-width: 1110px) {
     .app__header-description img {
         position: initial;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .app__header {
+        padding: 1.5rem 15vw;
+    }
+    .app__sections {
+        padding: 0 15vw;
     }
 }

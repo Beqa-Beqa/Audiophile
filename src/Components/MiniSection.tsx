@@ -8,12 +8,12 @@ let MiniSection = (props: {item: string; description: string; icon: string}) => 
     }
     return (
         <div className="mini-section">
-            <div id="image-div">
-                <img src={props.item} />
+            <div onClick={navigatorClick} id="mini-section-image-div">
+                <img src={props.item} alt="item image" />
             </div>
-            <div className="mini-section__description">
+            <div onClick={navigatorClick} className="mini-section__description">
                 <h2>{props.description}</h2>
-                <div onClick={navigatorClick} id="button-div">
+                <div id="button-div">
                     <span>Shop</span>
                     <img src={props.icon} />
                 </div>
