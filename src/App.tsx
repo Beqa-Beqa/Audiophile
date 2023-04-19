@@ -4,6 +4,9 @@ import {Routes, Route, Link} from "react-router-dom";
 import Headphones from './Containers/Headphones';
 import Speakers from './Containers/Speakers';
 import Earphones from './Containers/Earphones';
+import ScrollToTop from "./Containers/Scroll"; 
+import {useState, useEffect} from 'react';
+import IndividualItem from './Containers/IndividualItem';
 
 export function navCreator() {
     return (
@@ -16,15 +19,27 @@ export function navCreator() {
     );
 }
 
+
 function App() {
+    const [itemRoute, setItemRoute] = useState("");
+    useEffect(() => {
+        const data = window.localStorage.getItem("CURL");
+        {data && setItemRoute(data)}
+    }, []);
+    useEffect(() => {
+        window.localStorage.setItem("CURL", itemRoute);
+    }, [itemRoute]);
     return (
         <div className='app'>
-            <Routes>
-                <Route path="/" element={ <Home nav={navCreator()}/> } />
-                <Route path="/headphones" element={ <Headphones /> } />
-                <Route path="/speakers" element={<Speakers />} />
-                <Route path="/earphones" element={<Earphones />} />
-            </Routes>
+            <ScrollToTop>
+                <Routes>
+                    <Route path="/" element={ <Home setItemRoute={setItemRoute} nav={navCreator()}/> } />
+                    <Route path="/headphones" element={ <Headphones setItemRoute={setItemRoute} /> } />
+                    <Route path="/speakers" element={<Speakers setItemRoute={setItemRoute} />} />
+                    <Route path="/earphones" element={<Earphones setItemRoute={setItemRoute} />} />
+                    <Route path={itemRoute} element={<IndividualItem />} />
+                </Routes>
+            </ScrollToTop>
         </div>
   );
 }
