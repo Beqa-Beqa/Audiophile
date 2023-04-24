@@ -4,7 +4,7 @@ import headphoneData from "../Data/HeadphoneData";
 import speakerData from "../Data/SpeakerData";
 import earphoneData from "../Data/EarphoneData";
 
-let AlsoLikeContainer = (props: {from: string}) => {
+let AlsoLikeContainer = () => {
     const dataArr = [headphoneData, speakerData, earphoneData];
     const randomIndexFromData = (minNum: number, maxNum: number) => {
         return Math.floor((Math.random() * (maxNum - minNum) + minNum));
@@ -21,14 +21,23 @@ let AlsoLikeContainer = (props: {from: string}) => {
            differentData();
         }
     }
+    const setProperFromPath = (section: any) => {
+        if(section === headphoneData) {
+            return "/headphones/";
+        } else if (section === speakerData) {
+            return "/speakers/";
+        } else if (section === earphoneData) {
+            return "/earphones/";
+        }
+    }
     differentData();
     return (
         <div className="also-like-parent">
             <h2>You may also like</h2>
             <div className="also-like-container">
-                <AlsoLikeSingle from={props.from} itemData={itemData1} />
-                <AlsoLikeSingle from={props.from} itemData={itemData2} />
-                <AlsoLikeSingle from={props.from} itemData={itemData3} />
+                <AlsoLikeSingle from={setProperFromPath(randomSection1)} itemData={itemData1} />
+                <AlsoLikeSingle from={setProperFromPath(randomSection2)} itemData={itemData2} />
+                <AlsoLikeSingle from={setProperFromPath(randomSection3)} itemData={itemData3} />
             </div>
         </div>
     );

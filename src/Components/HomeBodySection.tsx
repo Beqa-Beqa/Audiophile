@@ -1,11 +1,7 @@
 import "./HomeBodySection.css"
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-let HomeBodySection = (props: {speaker: string; earphones: string; setItemRoute: any;}) => {
-    const location = useLocation();
-    const setLocation = (event: any) => {
-        props.setItemRoute(location.pathname + "/" + event.target.name);
-    }
+let HomeBodySection = (props: {speaker: string; earphones: string;}) => {
     return(
     <div className='app__sections-body'>
         <div id="speaker-top">
@@ -13,7 +9,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string; setItemRoute:
                 <h1>ZX9<br/>SPEAKER</h1>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                 <Link to="ZX9 SPEAKER">
-                    <button name="ZX9 SPEAKER" onClick={setLocation} className='product-button' type='button'>See Product</button>
+                    <button name="ZX9 SPEAKER" className='product-button' type='button'>See Product</button>
                 </Link>
             </div>
         </div>
@@ -21,7 +17,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string; setItemRoute:
             <div id='speaker-bottom__description'>
                 <h1>ZX7 SPEAKER</h1>
                 <Link to="ZX7 SPEAKER">
-                    <button name="ZX7 SPEAKER" onClick={setLocation} className='product-button' type='button'>See Product</button>
+                    <button name="ZX7 SPEAKER" className='product-button' type='button'>See Product</button>
                 </Link>
             </div>
         </div>
@@ -33,7 +29,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string; setItemRoute:
                 <div id="earphones__description-text">
                     <h1>YX1 EARPHONES</h1>
                     <Link to="YX1 EARPHONES">
-                        <button name="YX1 EARPHONES" onClick={setLocation} type="button" className='product-button'>See Product</button>
+                        <button name="YX1 EARPHONES" type="button" className='product-button'>See Product</button>
                     </Link>
                 </div>
             </div>

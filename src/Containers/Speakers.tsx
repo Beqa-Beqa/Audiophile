@@ -3,15 +3,11 @@ import SectionHeader from "../Components/SectionHeader";
 import MiniSecContainer from "./MiniSecContainer";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import speakerData from "../Data/SpeakerData";
 import { dataObject } from "../Data/Interface";
 
-let Speakers = (props: {setItemRoute: any}) => {
-    const location = useLocation();
-    const setLocation = (event: any) => {
-        props.setItemRoute(location.pathname + "/" + event.target.name);
-    }
+let Speakers = () => {
     return(
         <div>
             <SectionHeader description="Speakers" />
@@ -28,8 +24,8 @@ let Speakers = (props: {setItemRoute: any}) => {
                                             {item.newProduct && <span>NEW PRODUCT</span>}
                                             <h2>{item.h2}</h2>
                                             <p>{item.p}</p>
-                                            <Link to={item.h2} state={{data: speakerData[item.index - 1], from: location.pathname}}>
-                                                <button name={item.h2} onClick={setLocation} type="button" className="product-button">See Product</button>
+                                            <Link to={item.h2} state={{data: speakerData[item.index - 1]}}>
+                                                <button name={item.h2} type="button" className="product-button">See Product</button>
                                             </Link>
                                         </div>
                                     </div>
@@ -41,8 +37,8 @@ let Speakers = (props: {setItemRoute: any}) => {
                                             {item.newProduct && <span>NEW PRODUCT</span>}
                                             <h2>{item.h2}</h2>
                                             <p>{item.p}</p>
-                                            <Link to={item.h2} state={{data: speakerData[item.index - 1], from: location.pathname}}>
-                                                <button name={item.h2} onClick={setLocation} type="button" className="product-button">See Product</button>
+                                            <Link to={item.h2} state={{data: speakerData[item.index - 1]}}>
+                                                <button name={item.h2} type="button" className="product-button">See Product</button>
                                             </Link>
                                         </div>
                                         <div className="product__image">

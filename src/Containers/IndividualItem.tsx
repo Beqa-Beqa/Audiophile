@@ -71,7 +71,7 @@ let IndividualItem = (props: {data: any, from: string}) => {
                     <img id="image3" src={data.images[2]} alt="headphone image" />
                 </div>
                 <div className="item-section__sections">
-                    <AlsoLikeContainer from={from} />
+                    <AlsoLikeContainer />
                     <MiniSecContainer />
                 </div>
                 <div className="item-section__about">

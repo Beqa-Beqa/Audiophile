@@ -3,7 +3,7 @@ import "../Containers/UniversalSectionStyles.css";
 import { Link } from "react-router-dom";
 
 
-let AlsoLikeSingle = (props: {from: string, itemData: any}) => {
+let AlsoLikeSingle = (props: {from: any, itemData: any}) => {
     return (
         <div className="also-like__single">
             <div className="also-like__single-image">
