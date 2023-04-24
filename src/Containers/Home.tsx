@@ -11,7 +11,9 @@ let Home = (props: {nav: JSX.Element;}) => {
     <div className='app'>
         <div className='app__header'>
             <div className='app__header-nav'>
+                {/* Imported images from design folder homepage */}
                 <img src={Images.Audiophile} alt="logo" />
+                {/* Creating navigation for homepage utilizing exported navcreator function from app.tsx */}
                 {props.nav}
                 <img id="shopping-cart" src={Images.ShoppingCart} />
             </div>
@@ -20,7 +22,8 @@ let Home = (props: {nav: JSX.Element;}) => {
                     <span>NEW PRODUCT</span>
                     <h1>XX99 Mark II Headphones</h1>
                     <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                    <Link to="XX99 MARK II HEADPHONES">
+                    {/* Setting link to the path of item which it represents */}
+                    <Link to="/headphones/XX99 MARK II HEADPHONES">
                         <button name="XX99 MARK II HEADPHONES" type="button" className="product-button">See Product</button>
                     </Link>
                 </div>
@@ -29,7 +32,7 @@ let Home = (props: {nav: JSX.Element;}) => {
         </div>
         <div className='app__sections'>
             <MiniSecContainer/>
-            <HomeBodySection speaker={Images.SpeakerTop} earphones={Images.BigEarphones} />
+            <HomeBodySection earphones={Images.BigEarphones} />
             <About />
         </div>
         <div className='app__sections-footer'>

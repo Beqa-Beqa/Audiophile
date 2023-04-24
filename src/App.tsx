@@ -11,6 +11,8 @@ import speakerData from './Data/SpeakerData';
 import earphoneData from './Data/EarphoneData';
 import { specificDataObject } from './Data/Interface';
 
+//Nav bar creator which gives each element respective links
+//it is being used in other components too
 export function navCreator() {
     return (
         <nav className="navigation">
@@ -26,12 +28,16 @@ export function navCreator() {
 function App() {
     return (
         <div className='app'>
+            {/* Scroll to top is component which makes browser go to start while route is changed or page is refreshed */}
             <ScrollToTop>
+                {/* Declaring routes */}
                 <Routes>
                     <Route path="/" element={ <Home nav={navCreator()}/> } />
                     <Route path="/headphones" element={ <Headphones /> } />
                     <Route path="/speakers" element={<Speakers />} />
                     <Route path="/earphones" element={<Earphones />} />
+                    {/*Mapping routes based on database and giving necessary attributes to elements passing an item from data as "data" and
+                    passing route from where that data coms as "from"*/}
                     {headphoneData.map((item: specificDataObject, key: number) => (
                         <Route path={`/headphones/${item.h2}`} key={key} element={<IndividualItem from="/headphones/" data={item} />} />
                     ))}

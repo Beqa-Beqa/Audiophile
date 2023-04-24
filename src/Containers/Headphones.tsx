@@ -13,6 +13,7 @@ let Headphones = () => {
             <SectionHeader description="Headphones" />
             <div className="app__product-section">
                 <div className="app__product-body">
+                    {/* Mapping data from headphones. specificDataObject interface is defined in data/interface */}
                     {headphoneData.map((item: specificDataObject, key) => {
                         if(item.index % 2 != 0) {
                             return (
@@ -24,20 +25,21 @@ let Headphones = () => {
                                         {item.newProduct && <span>NEW PRODUCT</span>}
                                         <h2>{item.h2}</h2>
                                         <p>{item.p}</p>
-                                        <Link to={item.h2} state={{data: headphoneData[item.index - 1]}}>
+                                        <Link to={item.h2}>
                                             <button name={item.h2} type="button" className="product-button">See Product</button>
                                         </Link>
                                     </div>
                                 </div>
                             );
                         } else {
+                            // Reversing position of containers
                             return (
                                 <div className="app__product-body__product" key={key}>
                                     <div className="product__description">
                                         {item.newProduct && <span>NEW PRODUCT</span>}
                                         <h2>{item.h2}</h2>
                                         <p>{item.p}</p>
-                                        <Link to={item.h2} state={{data: headphoneData[item.index - 1]}}>
+                                        <Link to={item.h2}>
                                             <button name={item.h2} type="button" className="product-button">See Product</button>
                                         </Link>
                                     </div>

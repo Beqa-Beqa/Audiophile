@@ -13,6 +13,7 @@ let Earphones = () => {
             <SectionHeader description="earphones" />
             <div className="app__product-section">
                 <div className="app__product-body">
+                    {/* Rendering based on data. specificDataObject interfaces is declared in data/interface */}
                     {earphoneData.map((item: specificDataObject, key) => {
                                 if(item.index % 2 != 0) {
                                     return (
@@ -31,6 +32,7 @@ let Earphones = () => {
                                         </div>
                                     );
                                 } else {
+                                    // reversing container positions
                                     return (
                                         <div className="app__product-body__product" key={key}>
                                             <div className="product__description">

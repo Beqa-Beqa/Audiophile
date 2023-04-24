@@ -9,9 +9,12 @@ import About from "../Components/About";
 import Footer from "../Components/Footer";
 import { specificDataObject } from "../Data/Interface";
 
+// This container renders every individual product on the after click on "See Product" from any section
+// data and from are passed here dynamicaly by app.tsx 
 let IndividualItem = (props: {data: specificDataObject, from: string}) => {
     const data = props.data;
     const from = props.from; 
+    // State for quantity of product next to Add to cart button and event handlers for respective functions on button clicks
     const [value, setValue] = useState<number>(1);
     const handleIncrement = () => {
         setValue(value + 1);
@@ -21,11 +24,15 @@ let IndividualItem = (props: {data: specificDataObject, from: string}) => {
     }
     return(
         <div className="item-section">
+            {/* Section header is component defined in Components folder which creates section headers
+            that contains navigation logo and shopping cart icon, it's being used in individual section container
+            also in headphone speakers and earphones containers */}
             <SectionHeader />
             <div className="item-section__body app__product-section">
                 <Link to={from}>
                     <button id="go-back-button" type="button">Go Back</button>
                 </Link>
+                {/* Rendering based on database */}
                 <div className="app__product-body">
                     <div className="app__product-body__product">
                         <div className="product__image">
@@ -35,10 +42,13 @@ let IndividualItem = (props: {data: specificDataObject, from: string}) => {
                             {data.newProduct && <span>NEW PRODUCT</span>}
                             <h2>{data.h2}</h2>
                             <p>{data.p}</p>
+                            {/* This regex expression splits every three digits by comma */}
                             <span id="price-tag">{'$ ' + data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
                             <div id="add-to-cart">
                                 <div className="input">
+                                    {/* Buttons used to change value for input field. PS: input value is not able to be interacted independently */}
                                     <button onClick={handleDecrement} type="button">-</button>
+                                    {/* Input field whose value holds the value state on top of container */}
                                     <input value={value} onChange={(event) => setValue(parseInt(event.target.value))} type="number" />
                                     <button onClick={handleIncrement} type="button">+</button>
                                 </div>
@@ -50,12 +60,14 @@ let IndividualItem = (props: {data: specificDataObject, from: string}) => {
                 <div className="item-section__features">
                     <div className="item-section__features-features">
                         <h2>Features</h2>
+                        {/* Mapping data from database which is given in arrays. at this instance features paragraphs are being rendered */}
                         {data.features.map((item: string, key: number) => {
                             return <p key={key}>{item}</p>
                         })}
                     </div>
                     <div className="item-section__features-in-the-box">
                         <h2>In The Box</h2>
+                        {/* Rendering in the box items */}
                         {data.inTheBox.map((item: string[], key: number) => {
                             return (
                                 <div id="in-the-box" key={key}>
@@ -67,6 +79,7 @@ let IndividualItem = (props: {data: specificDataObject, from: string}) => {
                     </div>
                 </div>
                 <div className="decoration-images">
+                    {/* Rendering images from data */}
                     <img id="image1" src={data.images[0]} alt="human image" />
                     <img id="image2" src={data.images[1]} alt="headphone image" />
                     <img id="image3" src={data.images[2]} alt="headphone image" />

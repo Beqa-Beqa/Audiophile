@@ -1,6 +1,7 @@
 import "./About.css";
 import { HumanImg } from "../Design/Homepage/export"
 
+// Component with text and human image
 let About = () => {
     return (
     <div id="about">

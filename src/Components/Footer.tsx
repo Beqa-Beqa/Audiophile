@@ -2,7 +2,9 @@ import "./Footer.css";
 import {Audiophile, Fb, Twit, Insta} from "../Design/Homepage/export"
 import { navCreator } from "../App";
 
+// footer used for every section that has footer
 let Footer = () => {
+    // navcreator function from app.tsx
     let nav = navCreator();
     return (
     <div className='app__footer' >
