@@ -36,6 +36,7 @@
 
 .input input {
     color: #000;
+    pointer-events: none;
 }
 
 .input button {
@@ -50,4 +51,115 @@
 .input input::-webkit-outer-spin-button,
 .input input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+#go-back-button {
+    cursor: pointer;
+    background: #FFF;
+    margin-top: 5rem;
+    border: none;
+    outline: none;
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    opacity: .5;
+    transition: 0.2s;
+}
+
+#go-back-button:hover {
+    color: #D87D4A;
+    opacity: 1;
+}
+
+.item-section__features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: 350px;
+}
+
+.item-section__features-features {
+    width: 60%;
+    text-align: left;
+}
+
+.item-section__features-features h2,
+.item-section__features-in-the-box h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 1rem 0;
+}
+
+.item-section__features-features p,
+.item-section__features-in-the-box p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;
+    opacity: .5;
+}
+
+.item-section__features-features p {
+    margin: 2rem 0;
+}
+
+.item-section__features-in-the-box p,
+.item-section__features-in-the-box h3 {
+    margin-top: 1rem;
+}
+
+.item-section__features-in-the-box h3 {
+    width: 20px;
+    margin-right: 2rem;
+    color: #D87D4A;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.item-section__features-in-the-box {
+    width: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#in-the-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.decoration-images {
+    margin: 8rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, .73fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+#image1, #image2 {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 2;
+}
+
+#image3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+
+.item-section__about {
+    margin-top: -5rem;
 }

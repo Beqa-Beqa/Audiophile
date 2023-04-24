@@ -1,0 +1,32 @@
+.also-like__single {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.also-like__single-description h2 {
+    margin: 2rem 0;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.also-like__single-description button:hover {
+    cursor: pointer;
+    background: #FBAF85;
+}
+
+.also-like__single-image {
+   background: #f1f1f1;
+   border-radius: 8px; 
+   padding: 2.5rem;
+   width: 100%;
+}
+
+.also-like__single-image img {
+    width: 100%;
+    height: 200px;
+}
