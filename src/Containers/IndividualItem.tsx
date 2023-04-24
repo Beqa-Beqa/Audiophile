@@ -7,8 +7,9 @@ import AlsoLikeContainer from "./AlsoLikeContainer";
 import MiniSecContainer from "./MiniSecContainer";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import { specificDataObject } from "../Data/Interface";
 
-let IndividualItem = (props: {data: any, from: string}) => {
+let IndividualItem = (props: {data: specificDataObject, from: string}) => {
     const data = props.data;
     const from = props.from; 
     const [value, setValue] = useState<number>(1);
@@ -55,7 +56,7 @@ let IndividualItem = (props: {data: any, from: string}) => {
                     </div>
                     <div className="item-section__features-in-the-box">
                         <h2>In The Box</h2>
-                        {data.inTheBox.map((item: any, key: number) => {
+                        {data.inTheBox.map((item: string[], key: number) => {
                             return (
                                 <div id="in-the-box" key={key}>
                                     <h3>{item[0]}</h3>

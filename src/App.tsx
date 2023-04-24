@@ -9,6 +9,7 @@ import IndividualItem from './Containers/IndividualItem';
 import headphoneData from './Data/HeadphoneData';
 import speakerData from './Data/SpeakerData';
 import earphoneData from './Data/EarphoneData';
+import { specificDataObject } from './Data/Interface';
 
 export function navCreator() {
     return (
@@ -31,13 +32,13 @@ function App() {
                     <Route path="/headphones" element={ <Headphones /> } />
                     <Route path="/speakers" element={<Speakers />} />
                     <Route path="/earphones" element={<Earphones />} />
-                    {headphoneData.map((item: any, key: number) => (
+                    {headphoneData.map((item: specificDataObject, key: number) => (
                         <Route path={`/headphones/${item.h2}`} key={key} element={<IndividualItem from="/headphones/" data={item} />} />
                     ))}
-                    {speakerData.map((item: any, key: number) => (
+                    {speakerData.map((item: specificDataObject, key: number) => (
                         <Route path={`/speakers/${item.h2}`} key={key} element={<IndividualItem from='/speakers/' data={item} />} />
                     ))}
-                    {earphoneData.map((item: any, key: number) => (
+                    {earphoneData.map((item: specificDataObject, key: number) => (
                         <Route path={`/earphones/${item.h2}`} key={key} element={<IndividualItem from="/earphones/" data={item} />} />
                     ))}
                 </Routes>

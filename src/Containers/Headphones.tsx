@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import MiniSecContainer from "./MiniSecContainer";
 import { Link } from "react-router-dom";
 import headphoneData from "../Data/HeadphoneData";
-import { dataObject } from "../Data/Interface";
+import { specificDataObject } from "../Data/Interface";
 
 let Headphones = () => {
     return (
@@ -13,7 +13,7 @@ let Headphones = () => {
             <SectionHeader description="Headphones" />
             <div className="app__product-section">
                 <div className="app__product-body">
-                    {headphoneData.map((item: dataObject, key) => {
+                    {headphoneData.map((item: specificDataObject, key) => {
                         if(item.index % 2 != 0) {
                             return (
                                 <div className="app__product-body__product" key={key}>

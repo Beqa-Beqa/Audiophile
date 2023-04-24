@@ -1,9 +1,10 @@
 import "./AlsoLikeSingle.css";
 import "../Containers/UniversalSectionStyles.css";
 import { Link } from "react-router-dom";
+import { specificDataObject } from "../Data/Interface";
 
 
-let AlsoLikeSingle = (props: {from: any, itemData: any}) => {
+let AlsoLikeSingle = (props: {from: string | undefined, itemData: specificDataObject}) => {
     return (
         <div className="also-like__single">
             <div className="also-like__single-image">

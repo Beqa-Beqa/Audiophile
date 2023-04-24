@@ -5,7 +5,7 @@ import About from "../Components/About";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import earphoneData from "../Data/EarphoneData";
-import { dataObject } from "../Data/Interface";
+import { specificDataObject } from "../Data/Interface";
 
 let Earphones = () => {
     return(
@@ -13,7 +13,7 @@ let Earphones = () => {
             <SectionHeader description="earphones" />
             <div className="app__product-section">
                 <div className="app__product-body">
-                    {earphoneData.map((item: dataObject, key) => {
+                    {earphoneData.map((item: specificDataObject, key) => {
                                 if(item.index % 2 != 0) {
                                     return (
                                         <div className="app__product-body__product" key={key}>

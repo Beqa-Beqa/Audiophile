@@ -8,7 +8,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string;}) => {
             <div id="speaker-top__description">
                 <h1>ZX9<br/>SPEAKER</h1>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <Link to="ZX9 SPEAKER">
+                <Link to="/speakers/ZX9 SPEAKER">
                     <button name="ZX9 SPEAKER" className='product-button' type='button'>See Product</button>
                 </Link>
             </div>
@@ -16,7 +16,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string;}) => {
         <div id="speaker-bottom">
             <div id='speaker-bottom__description'>
                 <h1>ZX7 SPEAKER</h1>
-                <Link to="ZX7 SPEAKER">
+                <Link to="/speakers/ZX7 SPEAKER">
                     <button name="ZX7 SPEAKER" className='product-button' type='button'>See Product</button>
                 </Link>
             </div>
@@ -28,7 +28,7 @@ let HomeBodySection = (props: {speaker: string; earphones: string;}) => {
             <div id='earphones__description'>
                 <div id="earphones__description-text">
                     <h1>YX1 EARPHONES</h1>
-                    <Link to="YX1 EARPHONES">
+                    <Link to="/earphones/YX1 WIRELESS EARPHONES">
                         <button name="YX1 EARPHONES" type="button" className='product-button'>See Product</button>
                     </Link>
                 </div>

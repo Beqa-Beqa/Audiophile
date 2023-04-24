@@ -5,7 +5,7 @@ import About from "../Components/About";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import speakerData from "../Data/SpeakerData";
-import { dataObject } from "../Data/Interface";
+import { specificDataObject } from "../Data/Interface";
 
 let Speakers = () => {
     return(
@@ -13,7 +13,7 @@ let Speakers = () => {
             <SectionHeader description="Speakers" />
             <div className="app__product-section">
                 <div className="app__product-body">
-                    {speakerData.map((item: dataObject, key) => {
+                    {speakerData.map((item: specificDataObject, key) => {
                             if(item.index % 2 != 0) {
                                 return (
                                     <div className="app__product-body__product" key={key}>

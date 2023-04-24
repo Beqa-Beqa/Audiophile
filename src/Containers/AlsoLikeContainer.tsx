@@ -3,13 +3,17 @@ import AlsoLikeSingle from "../Components/AlsoLikeSingle";
 import headphoneData from "../Data/HeadphoneData";
 import speakerData from "../Data/SpeakerData";
 import earphoneData from "../Data/EarphoneData";
+import { specificDataObject } from "../Data/Interface";
 
 let AlsoLikeContainer = () => {
     const dataArr = [headphoneData, speakerData, earphoneData];
     const randomIndexFromData = (minNum: number, maxNum: number) => {
         return Math.floor((Math.random() * (maxNum - minNum) + minNum));
     }
-    let randomSection1, itemData1, randomSection2, itemData2, randomSection3, itemData3;
+    let randomSection1: specificDataObject[] = [], randomSection2: specificDataObject[] = [], randomSection3: specificDataObject[] = [];
+    let itemData1: specificDataObject = {features: [], h2: "", image: "", images: [], index: 0, inTheBox: [], newProduct: false, p: "", price: 0}
+    let itemData2: specificDataObject = itemData1;
+    let itemData3: specificDataObject = itemData1;
     const differentData = () => {
         randomSection1 = dataArr[randomIndexFromData(0, dataArr.length)];
         randomSection2 = dataArr[randomIndexFromData(0, dataArr.length)];
@@ -21,7 +25,7 @@ let AlsoLikeContainer = () => {
            differentData();
         }
     }
-    const setProperFromPath = (section: any) => {
+    const setProperFromPath = (section: specificDataObject[]) => {
         if(section === headphoneData) {
             return "/headphones/";
         } else if (section === speakerData) {

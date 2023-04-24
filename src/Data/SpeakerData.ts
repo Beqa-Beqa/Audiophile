@@ -1,9 +1,10 @@
 import * as IndividualSpeakerImages from "../Design/Speakers/Speakers/export";
 import {SpeakerOne, SpeakerTwo} from "../Design/Speakers/export";
+import { specificDataObject } from "./Interface";
 
 let index = 1;
 const indexer = () => (index++);
-const speakerData = [
+const speakerData: specificDataObject[] = [
     {
         index: indexer(),
         newProduct: true,

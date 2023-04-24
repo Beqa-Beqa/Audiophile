@@ -1,9 +1,10 @@
 import * as IndividualHeadphoneImages from "../Design/Headphones/HeadphoneImages/export";
 import { HeadphoneOne, HeadphoneTwo, HeadphoneThree } from "../Design/Headphones/export";
+import { specificDataObject } from "./Interface";
 
 let index = 1;
 const indexer = () => (index++);
-const headphoneData = [
+const headphoneData: specificDataObject[] = [
     {
         index: indexer(),
         newProduct: true,
