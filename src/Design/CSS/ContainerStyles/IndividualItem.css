@@ -53,25 +53,6 @@
     -webkit-appearance: none;
 }
 
-#go-back-button {
-    cursor: pointer;
-    background: #FFF;
-    margin-top: 5rem;
-    border: none;
-    outline: none;
-    font-family: "Manrope";
-    font-weight: 500;
-    font-size: 15px;
-    color: #000;
-    opacity: .5;
-    transition: 0.2s;
-}
-
-#go-back-button:hover {
-    color: #D87D4A;
-    opacity: 1;
-}
-
 .item-section__features {
     display: flex;
     justify-content: space-between;

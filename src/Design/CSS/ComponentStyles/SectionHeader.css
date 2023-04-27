@@ -1,0 +1,248 @@
+.navigation {
+    z-index: 101;
+    margin-right: 5rem;
+}
+
+.navigation .a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.navigation .a:hover {
+    cursor: pointer;
+    color: #D87D4A;
+}
+
+.app__section-header__background {
+    padding: 1.5rem 10vw;
+}
+
+.app__section-header-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__section-header-nav img {
+    z-index: 101;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #FFF;
+    margin: 5rem 0 3rem 0;
+}
+
+#shop-cart {
+    transition: 0.2s;
+    z-index: 101;
+    padding-left: 20px;
+}
+
+#shop-cart:hover {
+    cursor: pointer;
+    filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
+}
+
+.cart-menu {
+    z-index: 101;
+    border-radius: 8px;
+    background: #FFF;
+    color: #000;
+    width: 380px;
+    position: absolute;
+    left: 55vw;
+    top: 80px;
+    padding: 2rem;
+    animation-name: mount;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.empty-text {
+    text-align: center;
+}
+
+.empty-text span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    opacity: .5;
+}
+
+.cart-menu__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.cart-menu__header h1 {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.cart-menu__header p {
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline;
+    color: #000;
+    opacity: .5;
+    transition: 0.3s;
+}
+
+.cart-menu__header p:hover {
+    cursor: pointer;
+    color: #D87D4A;
+    opacity: 1;
+}
+
+.cart-menu__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-menu__body-image {
+    background: #F1F1F1;
+    border-radius: 8px;
+    padding: .7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.cart-menu__body-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.body-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 145px;
+}
+
+.cart-menu__body-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+    width: 70px;
+}
+
+.cart-menu__body-description h2 {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+}
+
+.cart-menu__body-description span {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    opacity: .5;
+}
+
+.cart-menu__body-quantity {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-menu__body-quantity {
+    height: 40px;
+}
+
+.cart-menu__body-quantity button,
+.cart-menu__body-quantity input {
+    cursor: pointer;
+    background: #F1F1F1;
+    border: none;
+    outline: none;
+    width: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+.cart-menu__body-quantity input {
+    color: #000;
+    pointer-events: none;
+}
+
+.cart-menu__body-quantity button {
+    color: rgba(0, 0, 0, 0.25);
+    transition: 0.1s;
+}
+
+.cart-menu__body-quantity button:hover {
+    color: #D87D4A;
+}
+
+.cart-menu__body-quantity input::-webkit-outer-spin-button,
+.cart-menu__body-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cart-menu__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.cart-menu__total span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    opacity: .5;
+}
+
+.cart-menu__total h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+
+.checkout-button {
+    width: 100% !important;
+}
+
+.checkout-button:hover {
+    cursor: pointer;
+    background: #FBAF85;
+}
+
+@media screen and (min-width: 1440px) {
+    .app__section-header__background {
+        padding: 1.5rem 15vw;
+    }
+}
+
+@keyframes mount {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

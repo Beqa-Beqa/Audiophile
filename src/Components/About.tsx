@@ -1,4 +1,4 @@
-import "./About.css";
+import "../Design/CSS/ComponentStyles/About.css";
 import { HumanImg } from "../Design/Homepage/export"
 
 // Component with text and human image

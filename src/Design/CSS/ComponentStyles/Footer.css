@@ -1,3 +1,13 @@
+hr {
+    border: none;
+    margin: 0 10vw;
+    width: 101px;
+    height: 4px;
+    background-color: #D87D4A;
+    position: relative;
+    bottom: -4px;
+}
+
 .app__footer {
     background: #101010;
     padding: 7vh 10vw;
@@ -57,5 +67,8 @@
 @media screen and (min-width: 1440px) {
     .app__footer {
         padding: 7vh 15vw;
+    }
+    hr {
+        margin: 0 15vw;
     }
 }

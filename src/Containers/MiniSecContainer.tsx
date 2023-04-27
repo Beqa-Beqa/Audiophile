@@ -1,4 +1,4 @@
-import "./MiniSecContainer.css";
+import "../Design/CSS/ContainerStyles/MiniSecContainer.css";
 import MiniSection from "../Components/MiniSection";
 import {Path, Headphones, Speakers, Earphones} from "../Design/Homepage/export";
 

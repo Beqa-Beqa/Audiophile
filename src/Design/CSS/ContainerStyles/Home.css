@@ -1,15 +1,10 @@
 .app__header {
     background: #141313;
-    padding: 1.5rem 10vw;
     color: #FFF;
     margin-bottom: 5rem;
 }
 
 .app__header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -23,6 +18,7 @@
 }
 
 .app__header-description {
+    padding: 0 10vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,8 +98,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .app__header {
-        padding: 1.5rem 15vw;
+    .app__header-description {
+        padding: 0 15vw;
     }
     .app__sections {
         padding: 0 15vw;

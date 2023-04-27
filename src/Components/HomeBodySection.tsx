@@ -1,4 +1,4 @@
-import "./HomeBodySection.css"
+import "../Design/CSS/ComponentStyles/HomeBodySection.css"
 import { Link } from "react-router-dom";
 
 // As name says this container is used to hold main concepts of homepage

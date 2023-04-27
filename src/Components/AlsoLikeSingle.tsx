@@ -1,5 +1,5 @@
-import "./AlsoLikeSingle.css";
-import "../Containers/UniversalSectionStyles.css";
+import "../Design/CSS/ComponentStyles/AlsoLikeSingle.css";
+import "../Design/CSS/ContainerStyles/UniversalSectionStyles.css";
 import { Link } from "react-router-dom";
 import { specificDataObject } from "../Data/Interface";
 

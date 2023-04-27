@@ -1,0 +1,13 @@
+.checkout__header {
+    background: #000;
+}
+
+.checkout__body {
+    padding: 0 10vw;
+}
+
+@media screen and (min-width: 1440px) {
+    .checkout__body {
+        padding: 0 15vw;
+    }
+}

@@ -9,3 +9,7 @@ export interface specificDataObject  {
     inTheBox: string[][];
     price: number;
 }
+
+export interface StorageObjectElement extends specificDataObject {
+    quantity: number;
+}

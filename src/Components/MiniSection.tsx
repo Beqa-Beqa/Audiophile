@@ -1,4 +1,4 @@
-import "./MiniSection.css";
+import "../Design/CSS/ComponentStyles/MiniSection.css";
 import { useNavigate } from "react-router";
 
 // Mini section which is used in MiniSecContainer container 

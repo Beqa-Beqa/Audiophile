@@ -1,16 +1,21 @@
-import "./UniversalSectionStyles.css";
+import "../Design/CSS/ContainerStyles/UniversalSectionStyles.css";
 import SectionHeader from "../Components/SectionHeader";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import MiniSecContainer from "./MiniSecContainer";
 import { Link } from "react-router-dom";
 import headphoneData from "../Data/HeadphoneData";
-import { specificDataObject } from "../Data/Interface";
+import { StorageObjectElement, specificDataObject } from "../Data/Interface";
+import { BlurElement } from "../App";
 
-let Headphones = () => {
+let Headphones = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>; cartStorage: StorageObjectElement[]; toggleCart: boolean; setToggleCart: React.Dispatch<React.SetStateAction<boolean>>}) => {
+    const blurElement = BlurElement();
     return (
         <div>
-            <SectionHeader description="Headphones" />
+            {props.toggleCart && blurElement}
+            <div className="black-background">
+                <SectionHeader setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} toggleCart={props.toggleCart} setToggleCart={props.setToggleCart} description="Headphones" />
+            </div>
             <div className="app__product-section">
                 <div className="app__product-body">
                     {/* Mapping data from headphones. specificDataObject interface is defined in data/interface */}
