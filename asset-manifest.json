@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/web-todo-5-test/static/css/main.eac6602c.css",
-    "main.js": "/web-todo-5-test/static/js/main.12155009.js",
+    "main.css": "/web-todo-5-test/static/css/main.6b2000b8.css",
+    "main.js": "/web-todo-5-test/static/js/main.5d20de05.js",
+    "static/media/MobHumanImg.svg": "/web-todo-5-test/static/media/MobHumanImg.6a9bf08da91bdccdb3ee9f69da494d2e.svg",
     "static/media/HeadphoneOneFirst.svg": "/web-todo-5-test/static/media/HeadphoneOneFirst.63e763c9300e7c7c2427a2b2e478d8db.svg",
     "static/media/HumanImg.svg": "/web-todo-5-test/static/media/HumanImg.c80a6bc01869e0db66abbb21f937ab89.svg",
     "static/media/TabletAboutUs.svg": "/web-todo-5-test/static/media/TabletAboutUs.104852e84b56e8afc4f0f638de9e7c18.svg",
@@ -18,6 +19,7 @@
     "static/media/HeadphoneTwoSecond.svg": "/web-todo-5-test/static/media/HeadphoneTwoSecond.e55a0598ca69d87e1cbc27091e1c77f2.svg",
     "static/media/SpeakerBottom.svg": "/web-todo-5-test/static/media/SpeakerBottom.262006e04c86c9ee7cd4b7b60e475aab.svg",
     "static/media/TabletIntroSpeakerBottom.svg": "/web-todo-5-test/static/media/TabletIntroSpeakerBottom.c5864db6e12c2f88a61481fbc2d68238.svg",
+    "static/media/MobSpeakerBottom.svg": "/web-todo-5-test/static/media/MobSpeakerBottom.f8328650e93bcaf8103d.svg",
     "static/media/SpeakerTwoThree.svg": "/web-todo-5-test/static/media/SpeakerTwoThree.ee7afb489e2efa0a94099a07dcc3eff0.svg",
     "static/media/HeadphoneThreeSecond.svg": "/web-todo-5-test/static/media/HeadphoneThreeSecond.9d8a8034eafaaf64fae0c29745965247.svg",
     "static/media/SpeakerOneThree.svg": "/web-todo-5-test/static/media/SpeakerOneThree.d041d3b39c400a12cbd8c0a88367fbb2.svg",
@@ -29,10 +31,12 @@
     "static/media/Headphones-second.svg": "/web-todo-5-test/static/media/Headphones-second.36439169cbe1055559655394943972ec.svg",
     "static/media/Headphones.svg": "/web-todo-5-test/static/media/Headphones.5f64a9f04a1732ec467bb78c494c867f.svg",
     "static/media/TabletIntroHeadphone.svg": "/web-todo-5-test/static/media/TabletIntroHeadphone.8a1d434e28cee1f1946b73497b15bce7.svg",
+    "static/media/MobIntroHeadphones.svg": "/web-todo-5-test/static/media/MobIntroHeadphones.db0891463cfb45e52629.svg",
     "static/media/HeadphoneOneThird.svg": "/web-todo-5-test/static/media/HeadphoneOneThird.5ac0362030341a7cbfdce5ae3d8917cf.svg",
     "static/media/SpeakerFirst.svg": "/web-todo-5-test/static/media/SpeakerFirst.0187493d6b9e52e5045177b28c8bf6c3.svg",
     "static/media/Speakers.svg": "/web-todo-5-test/static/media/Speakers.22586bfc05a6bbe217b1737bb782ae7b.svg",
     "static/media/SpeakerTop.svg": "/web-todo-5-test/static/media/SpeakerTop.9dfd94d63529c861f0c00ef9ee874389.svg",
+    "static/media/TabletSpeakerTop.svg": "/web-todo-5-test/static/media/TabletSpeakerTop.aa26bd328125e8ab16fefb5ee1e4b0f1.svg",
     "static/media/SpeakerSecond.svg": "/web-todo-5-test/static/media/SpeakerSecond.0fb5193bba289e80aefb235a3c509812.svg",
     "static/media/Headphones-first.svg": "/web-todo-5-test/static/media/Headphones-first.c5ce8913ef62a48b0a34c43693e90bcd.svg",
     "static/media/Headphones-third.svg": "/web-todo-5-test/static/media/Headphones-third.1af86487962f45fe4897a30a8f1f4930.svg",
@@ -44,16 +48,17 @@
     "static/media/Insta.svg": "/web-todo-5-test/static/media/Insta.e545df74ea71c7b54c6efcb6737abf49.svg",
     "index.html": "/web-todo-5-test/index.html",
     "static/media/Twit.svg": "/web-todo-5-test/static/media/Twit.89dca20e5ba737cb582c816adbdce997.svg",
-    "static/media/TabletIntroSpeakerTop.svg": "/web-todo-5-test/static/media/TabletIntroSpeakerTop.e0e22b33cf3aa9699a92db32356e2206.svg",
+    "static/media/TabletSpeakerTopCircles.svg": "/web-todo-5-test/static/media/TabletSpeakerTopCircles.e0e22b33cf3aa9699a92db32356e2206.svg",
     "static/media/Fb.svg": "/web-todo-5-test/static/media/Fb.aa554c39774fdcc69a00f5c9386f81cb.svg",
+    "static/media/MobCircles.svg": "/web-todo-5-test/static/media/MobCircles.50cc352e34953725cba1.svg",
     "static/media/Circles.svg": "/web-todo-5-test/static/media/Circles.4a17521dfe5f6045ae8e.svg",
     "static/media/ThreeLines.svg": "/web-todo-5-test/static/media/ThreeLines.6b153a438d21029088d6a9482262561d.svg",
     "static/media/Path.svg": "/web-todo-5-test/static/media/Path.b1c1e4130b3c1d25064fd5eab827650b.svg",
-    "main.eac6602c.css.map": "/web-todo-5-test/static/css/main.eac6602c.css.map",
-    "main.12155009.js.map": "/web-todo-5-test/static/js/main.12155009.js.map"
+    "main.6b2000b8.css.map": "/web-todo-5-test/static/css/main.6b2000b8.css.map",
+    "main.5d20de05.js.map": "/web-todo-5-test/static/js/main.5d20de05.js.map"
   },
   "entrypoints": [
-    "static/css/main.eac6602c.css",
-    "static/js/main.12155009.js"
+    "static/css/main.6b2000b8.css",
+    "static/js/main.5d20de05.js"
   ]
 }
