@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StorageObjectElement } from "../Data/Interface";
 import "../Design/CSS/ComponentStyles/SectionHeader.css";
 import "../Design/CSS/ContainerStyles/UniversalSectionStyles.css";
 import { Audiophile, ShoppingCart } from "../Design/Homepage/export";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import MiniSecContainer from "../Containers/MiniSecContainer";
+import { ThreeLines } from "../Design/TabletStyles/export";
+import { BlurElement } from "../App";
 // This component creates section headers which contain logo navigation and shopping cart icon
 // description attribute is optional, if it's given then respective styles ar added to it
 // We use it with description in general sections and without description in individual section container
@@ -14,17 +16,23 @@ import { Link } from "react-router-dom";
 export function navCreator() {
     return(
         <nav className="navigation">
-            <Link className='a' to="/">Home</Link>
-            <Link className='a' to="/headphones">Headphones</Link>
-            <Link className='a' to="/speakers">Speakers</Link>
-            <Link className='a' to="/earphones">Earphones</Link>
+            <Link className='a' to="/web-todo-5-test/">Home</Link>
+            <Link className='a' to="/web-todo-5-test/headphones">Headphones</Link>
+            <Link className='a' to="/web-todo-5-test/speakers">Speakers</Link>
+            <Link className='a' to="/web-todo-5-test/earphones">Earphones</Link>
         </nav>
     );
 }
 
 
-let SectionHeader = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>; cartStorage: StorageObjectElement[]; description?: string; toggleCart: boolean; setToggleCart: React.Dispatch<React.SetStateAction<boolean>>}) => {
+let SectionHeader = (props: {width: number; setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>; cartStorage: StorageObjectElement[]; description?: string;}) => {
+    const [toggleCart, setToggleCart] = useState(false);
+    const [tabletMenu, setTabletMenu] = useState(false);
     const [updateState, setUpdateState] = useState<boolean>(false);
+    const location = useLocation();
+    useEffect(() => {
+        setToggleCart(false);
+    }, [location]);
     let totalPrice: number = 0;
     const Menu = () => {
         let element: JSX.Element = <div />;
@@ -67,7 +75,7 @@ let SectionHeader = (props: {setCartStorage: React.Dispatch<React.SetStateAction
                             }
                         })}</h3>
                     </div>
-                    <Link to="/checkout">
+                    <Link to="/web-todo-5-test/checkout">
                         <button type="button" className="product-button checkout-button">Checkout</button>
                     </Link>
                 </div>
@@ -77,19 +85,44 @@ let SectionHeader = (props: {setCartStorage: React.Dispatch<React.SetStateAction
             return element;
         }
     }
+    const TabletMenu = () => {
+        return (
+            <div id="tabletMenu" className="slide-in-top">
+                <MiniSecContainer />
+            </div>
+        );
+    }
     // Creating navigation based on declared function in app.tsx
     const nav: JSX.Element = navCreator();
     const menu: JSX.Element = Menu();
+    const tabletmenu: JSX.Element = TabletMenu();
     return (
         <div className="app__section-header__background">
-            <div className="app__section-header-nav">
-                <img src={Audiophile} alt="logo" />
-                {nav}
-                <img onClick={() => props.setToggleCart(!props.toggleCart)} id="shop-cart" src={ShoppingCart} alt="shopping cart" />
-            </div>
+            {tabletMenu || toggleCart ? BlurElement() : null}
+                {props.width < 650 ?
+                    <div className="app__section-header-nav">
+                        <img id="miniMenu" onClick={() => {setTabletMenu(!tabletMenu); {toggleCart && setToggleCart(false)}}} src={ThreeLines} alt="toggle menu" />
+                        <Link to="/web-todo-5-test">
+                            <img id="logo" src={Audiophile} alt="logo" />
+                        </Link>
+                        <img onClick={() => {setToggleCart(!toggleCart); {tabletMenu && setTabletMenu(false)}}} id="shop-cart" src={ShoppingCart} alt="shopping cart" />
+                    </div>
+                : 
+                    <div className="app__section-header-nav">
+                        <div id="headerImages">
+                            {props.width <= 1150 && <img id="miniMenu" onClick={() => {setTabletMenu(!tabletMenu); {toggleCart && setToggleCart(false)}}} src={ThreeLines} alt="toggle menu" />}
+                            <Link to="/web-todo-5-test">
+                                <img id="logo" src={Audiophile} alt="logo" />
+                            </Link>
+                        </div>
+                        {props.width > 1150 && nav}
+                        <img onClick={() => {setToggleCart(!toggleCart); {tabletMenu && setTabletMenu(false)}}} id="shop-cart" src={ShoppingCart} alt="shopping cart" />
+                    </div>
+                }
             {/* Conditional rendering whether or not to show shopping cart list */}
-            {props.toggleCart && menu}
+            {toggleCart && menu}
             {/* Conditional rendering if description is present or not */}
+            {props.width <= 1150 && tabletMenu ? tabletmenu : null}
             {
                 props.description ?
                     <h1 className="header">{props.description}</h1>

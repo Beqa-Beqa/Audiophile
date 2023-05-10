@@ -4,11 +4,11 @@ import { useNavigate } from "react-router";
 // Mini section which is used in MiniSecContainer container 
 // item is an images and description is for declaring
 // which section will be accessed by this component
-let MiniSection = (props: {item: string; description: string; icon: string}) => {
+let MiniSection = (props: {path: string; item: string; description: string; icon: string}) => {
     // This function sets url respectively based on description
     const navigate = useNavigate();
     let navigatorClick = () => {
-        navigate(`/${props.description}`);
+        navigate(`${props.path}`);
     }
     return (
         <div className="mini-section">

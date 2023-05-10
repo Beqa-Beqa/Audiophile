@@ -26,7 +26,8 @@ hr {
 }
 
 .app__footer-about p,
-.app__footer-about span {
+.app__footer-about span,
+.footer__nav span {
     font-size: 15px;
     line-height: 25px;
     color: #FFF;
@@ -70,5 +71,37 @@ hr {
     }
     hr {
         margin: 0 15vw;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__footer {
+        padding: 5vh 5vw;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 360px;
+    }
+
+    .footer__nav {
+        flex-direction: row;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__footer {
+        min-height: 660px;
+        text-align: center;
+    }
+
+    .footer__nav {
+        margin-top: 2rem;
+        min-height: 120px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    hr {
+        margin: 0 auto;
     }
 }

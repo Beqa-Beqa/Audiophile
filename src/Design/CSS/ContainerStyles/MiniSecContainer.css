@@ -9,3 +9,10 @@
         grid-gap: 1rem;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 7.5rem;
+    }
+}

@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
 #mini-section-image-div {
@@ -87,4 +87,10 @@
 
 #button-div span {
     transition: 0.3s;
+}
+
+@media screen and (max-width: 650px) {
+    .mini-section {
+        margin-top: -3rem;
+    }
 }

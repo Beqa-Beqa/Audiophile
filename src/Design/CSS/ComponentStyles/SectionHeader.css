@@ -20,6 +20,10 @@
     color: #D87D4A;
 }
 
+.navigation .a:first-child {
+    margin-left: 0;
+}
+
 .app__section-header__background {
     padding: 1.5rem 10vw;
 }
@@ -47,7 +51,6 @@
 #shop-cart {
     transition: 0.2s;
     z-index: 101;
-    padding-left: 20px;
 }
 
 #shop-cart:hover {
@@ -232,6 +235,35 @@
     background: #FBAF85;
 }
 
+#headerImages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    z-index: 101;
+}
+
+#headerImages img {
+    transition: 0.2s;
+}
+
+#headerImages img:hover {
+    cursor: pointer;
+    filter: invert(55%) sepia(20%) saturate(1215%) hue-rotate(337deg) brightness(96%) contrast(97%);
+}
+
+#tabletMenu {
+    padding: 0 2.5rem;
+    width: 100%;
+    margin-left: -5vw;
+    margin-top: 1.5rem;
+    background: #FFF;
+    position: absolute;
+    z-index: 101;
+    border-end-end-radius: 32px;
+    border-end-start-radius: 32px;
+}
+
 @media screen and (min-width: 1440px) {
     .app__section-header__background {
         padding: 1.5rem 15vw;
@@ -244,5 +276,74 @@
     }
     100% {
         opacity: 100%;
+    }
+}
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+@media screen and (max-width: 1150px) {
+    .app__section-header__background {
+        padding: 1.5rem 5vw;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .cart-menu {
+        left: 40vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navigation .a {
+        margin: 1rem 0;
+    }
+
+    .navigation .a:first-child {
+        margin-top: 2rem;
+    }
+
+    .cart-menu {
+        width: calc(100% - 10vw);
+        left: 5vw;
+    }
+
+    #tabletMenu {
+        padding: 6rem 2.5rem 0 2.5rem;
     }
 }

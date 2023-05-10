@@ -19,34 +19,45 @@ export function BlurElement() {
 }
 
 function App() {
-    const [toggleCart, setToggleCart] = useState(false);
     const [cartStorage, setCartStorage] = useState<StorageObjectElement[]>([]);
-    const location = useLocation();
+    const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
-        setToggleCart(false);
-    }, [location])
+        {window.sessionStorage.getItem("cartItems") !== null && setCartStorage(JSON.parse(window.sessionStorage.getItem("cartItems")!))}
+    }, []);
+    useEffect(() => {
+        window.sessionStorage.setItem("cartItems", JSON.stringify(cartStorage));
+    }, [cartStorage]);
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", resize);
+        return () => {
+            window.removeEventListener("resize", resize);
+        }
+    }, []);
     return (
         <div className='app'>
             {/* Scroll to top is component which makes browser go to start while route is changed or page is refreshed */}
             <ScrollToTop>
                 {/* Declaring routes */}
                 <Routes>
-                    <Route path="/" element={ <Home setCartStorage={setCartStorage} cartStorage={cartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} /> } />
-                    <Route path="/headphones" element={ <Headphones setCartStorage={setCartStorage} cartStorage={cartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} /> } />
-                    <Route path="/speakers" element={<Speakers setCartStorage={setCartStorage} cartStorage={cartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} />} />
-                    <Route path="/earphones" element={<Earphones setCartStorage={setCartStorage} cartStorage={cartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} />} />
+                    <Route path="/web-todo-5-test" element={ <Home width={width} setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
+                    <Route path="/web-todo-5-test/headphones" element={ <Headphones width={width} setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
+                    <Route path="/web-todo-5-test/speakers" element={<Speakers width={width} setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
+                    <Route path="/web-todo-5-test/earphones" element={<Earphones width={width} setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
                     {/*Mapping routes based on database and giving necessary attributes to elements passing an item from data as "data" and
                     passing route from where that data coms as "from"*/}
                     {headphoneData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/headphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} from="/headphones/" data={item} />} />
+                        <Route path={`/web-todo-5-test/headphones/${item.h2}`} key={key} element={<IndividualItem width={width} cartStorage={cartStorage} setCartStorage={setCartStorage} from="/web-todo-5-test/headphones/" data={item} />} />
                     ))}
                     {speakerData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/speakers/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} from='/speakers/' data={item} />} />
+                        <Route path={`/web-todo-5-test/speakers/${item.h2}`} key={key} element={<IndividualItem width={width} cartStorage={cartStorage} setCartStorage={setCartStorage} from='/web-todo-5-test/speakers/' data={item} />} />
                     ))}
                     {earphoneData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/earphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} from="/earphones/" data={item} />} />
+                        <Route path={`/web-todo-5-test/earphones/${item.h2}`} key={key} element={<IndividualItem width={width} cartStorage={cartStorage} setCartStorage={setCartStorage} from="/web-todo-5-test/earphones/" data={item} />} />
                     ))}
-                    {cartStorage.length > 0 && <Route path="/checkout" element={<Checkout cartStorage={cartStorage} setCartStorage={setCartStorage} toggleCart={toggleCart} setToggleCart={setToggleCart} />} />}
+                    <Route path="/web-todo-5-test/checkout" element={<Checkout width={width} cartStorage={cartStorage} setCartStorage={setCartStorage} />} />
                 </Routes>
             </ScrollToTop>
         </div>

@@ -1,0 +1,1 @@
+export {default as MobHumanImg} from "./MobHumanImg.svg";

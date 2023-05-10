@@ -6,43 +6,38 @@ import About from '../Components/About';
 import MiniSecContainer from '../Containers/MiniSecContainer';
 import { Link } from "react-router-dom";
 import SectionHeader from "../Components/SectionHeader";
-import { BlurElement } from "../App";
 import { StorageObjectElement } from "../Data/Interface";
 
-let Home = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>;cartStorage: StorageObjectElement[]; toggleCart: boolean; setToggleCart: React.Dispatch<React.SetStateAction<boolean>>}) => {
-    const blurElement = BlurElement();
+let Home = (props: {width: number; setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>;cartStorage: StorageObjectElement[];}) => {
     return (
-    <>
-        {props.toggleCart && blurElement}
-        <div className='app'>
+        <div>
             <div className='app__header'>
                 <div className='app__header-nav'>
                     <div className="black-background"></div>
-                    <SectionHeader setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} toggleCart={props.toggleCart} setToggleCart={props.setToggleCart} />
+                    <SectionHeader width={props.width} setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} />
                 </div>
                 <div className='app__header-description'>
                     <div className='app__header-description__text'>
                         <span>NEW PRODUCT</span>
-                        <h1>XX99 Mark II Headphones</h1>
+                        <h1>XX99 Mark II<br/>Headphones</h1>
                         <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                         {/* Setting link to the path of item which it represents */}
-                        <Link to="/headphones/XX99 MARK II HEADPHONES">
+                        <Link to="/web-todo-5-test/headphones/XX99 MARK II HEADPHONES">
                             <button name="XX99 MARK II HEADPHONES" type="button" className="product-button">See Product</button>
                         </Link>
                     </div>
-                    <img src={Images.IntroHeadphones} alt="image" />
+                    {props.width > 1150 && <img src={Images.IntroHeadphones} alt="image" />}
                 </div>
             </div>
             <div className='app__sections'>
                 <MiniSecContainer/>
-                <HomeBodySection earphones={Images.BigEarphones} />
-                <About />
+                <HomeBodySection width={props.width} />
+                <About width={props.width} />
             </div>
             <div className='app__sections-footer'>
-                <Footer />
+                <Footer width={props.width} />
             </div>
         </div>
-    </>
     );
 }
 
