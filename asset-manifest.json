@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/web-todo-5-test/static/css/main.6b2000b8.css",
-    "main.js": "/web-todo-5-test/static/js/main.5d20de05.js",
-    "static/media/MobHumanImg.svg": "/web-todo-5-test/static/media/MobHumanImg.6a9bf08da91bdccdb3ee9f69da494d2e.svg",
+    "main.css": "/web-todo-5-test/static/css/main.724b86df.css",
+    "main.js": "/web-todo-5-test/static/js/main.d7796f64.js",
+    "static/media/MobHumanImg.svg": "/web-todo-5-test/static/media/MobHumanImg.6a9bf08da91bdccdb3ee.svg",
     "static/media/HeadphoneOneFirst.svg": "/web-todo-5-test/static/media/HeadphoneOneFirst.63e763c9300e7c7c2427a2b2e478d8db.svg",
     "static/media/HumanImg.svg": "/web-todo-5-test/static/media/HumanImg.c80a6bc01869e0db66abbb21f937ab89.svg",
     "static/media/TabletAboutUs.svg": "/web-todo-5-test/static/media/TabletAboutUs.104852e84b56e8afc4f0f638de9e7c18.svg",
@@ -54,11 +54,11 @@
     "static/media/Circles.svg": "/web-todo-5-test/static/media/Circles.4a17521dfe5f6045ae8e.svg",
     "static/media/ThreeLines.svg": "/web-todo-5-test/static/media/ThreeLines.6b153a438d21029088d6a9482262561d.svg",
     "static/media/Path.svg": "/web-todo-5-test/static/media/Path.b1c1e4130b3c1d25064fd5eab827650b.svg",
-    "main.6b2000b8.css.map": "/web-todo-5-test/static/css/main.6b2000b8.css.map",
-    "main.5d20de05.js.map": "/web-todo-5-test/static/js/main.5d20de05.js.map"
+    "main.724b86df.css.map": "/web-todo-5-test/static/css/main.724b86df.css.map",
+    "main.d7796f64.js.map": "/web-todo-5-test/static/js/main.d7796f64.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b2000b8.css",
-    "static/js/main.5d20de05.js"
+    "static/css/main.724b86df.css",
+    "static/js/main.d7796f64.js"
   ]
 }
