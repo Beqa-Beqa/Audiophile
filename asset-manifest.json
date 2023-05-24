@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web-todo-5-test/static/css/main.fc5685c4.css",
-    "main.js": "/web-todo-5-test/static/js/main.ccdd7d1b.js",
+    "main.css": "/web-todo-5-test/static/css/main.c61d8126.css",
+    "main.js": "/web-todo-5-test/static/js/main.dfda46e0.js",
     "static/media/MobHumanImg.svg": "/web-todo-5-test/static/media/MobHumanImg.6a9bf08da91bdccdb3ee.svg",
     "static/media/HeadphoneOneFirst.svg": "/web-todo-5-test/static/media/HeadphoneOneFirst.63e763c9300e7c7c2427a2b2e478d8db.svg",
     "static/media/HumanImg.svg": "/web-todo-5-test/static/media/HumanImg.c80a6bc01869e0db66abbb21f937ab89.svg",
@@ -56,11 +56,11 @@
     "static/media/ThreeLines.svg": "/web-todo-5-test/static/media/ThreeLines.6b153a438d21029088d6a9482262561d.svg",
     "static/media/Tick.svg": "/web-todo-5-test/static/media/Tick.b0c69db0da1ad73ddb4f7d83cab78e13.svg",
     "static/media/Path.svg": "/web-todo-5-test/static/media/Path.b1c1e4130b3c1d25064fd5eab827650b.svg",
-    "main.fc5685c4.css.map": "/web-todo-5-test/static/css/main.fc5685c4.css.map",
-    "main.ccdd7d1b.js.map": "/web-todo-5-test/static/js/main.ccdd7d1b.js.map"
+    "main.c61d8126.css.map": "/web-todo-5-test/static/css/main.c61d8126.css.map",
+    "main.dfda46e0.js.map": "/web-todo-5-test/static/js/main.dfda46e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc5685c4.css",
-    "static/js/main.ccdd7d1b.js"
+    "static/css/main.c61d8126.css",
+    "static/js/main.dfda46e0.js"
   ]
 }
