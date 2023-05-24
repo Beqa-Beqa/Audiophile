@@ -6,7 +6,7 @@ import earphoneData from "../Data/EarphoneData";
 import { specificDataObject } from "../Data/Interface";
 
 let AlsoLikeContainer = (props: {data: specificDataObject}) => {
-    // Imported all the data to create array of all the data which is used to randomly pick an item for You may also like section
+    // Imported all the data to create array of all the data which is used to randomly pick an item for "You may also like" section
     const dataArr = [headphoneData, speakerData, earphoneData];
     // Generates random index from range in given numbers
     const randomIndexFromData = (minNum: number, maxNum: number) => {
@@ -17,7 +17,7 @@ let AlsoLikeContainer = (props: {data: specificDataObject}) => {
     let itemData1: specificDataObject = {features: [], h2: "", image: "", images: [], index: 0, inTheBox: [], newProduct: false, p: "", price: 0}
     let itemData2: specificDataObject = itemData1;
     let itemData3: specificDataObject = itemData1;
-    // This while loop ensures all the items are different and none repeats. Also makes sure we won't see same item we ar observing to.
+    // This while loop ensures all the items are different and none repeats. Also makes sure we won't see same item we are observing to.
     while(itemData1 === itemData2 || itemData1 === itemData3 || itemData2 === itemData3 || itemData1 === props.data || itemData2 === props.data || itemData3 === props.data) {
         randomSection1 = dataArr[randomIndexFromData(0, dataArr.length)];
         randomSection2 = dataArr[randomIndexFromData(0, dataArr.length)];
@@ -29,11 +29,11 @@ let AlsoLikeContainer = (props: {data: specificDataObject}) => {
     // This function corrects the path based on where the item is chosen from
     const setProperFromPath = (section: specificDataObject[]) => {
         if(section === headphoneData) {
-            return "/headphones/";
+            return "/web-todo-5-test/headphones/";
         } else if (section === speakerData) {
-            return "/speakers/";
+            return "/web-todo-5-test/speakers/";
         } else if (section === earphoneData) {
-            return "/earphones/";
+            return "/web-todo-5-test/earphones/";
         }
     }
     return (

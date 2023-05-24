@@ -8,13 +8,14 @@ import { Link } from "react-router-dom";
 import SectionHeader from "../Components/SectionHeader";
 import { StorageObjectElement } from "../Data/Interface";
 
-let Home = (props: {width: number; setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>;cartStorage: StorageObjectElement[];}) => {
+// Homepage
+let Home = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>;cartStorage: StorageObjectElement[];}) => {
     return (
         <div>
             <div className='app__header'>
                 <div className='app__header-nav'>
                     <div className="black-background"></div>
-                    <SectionHeader width={props.width} setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} />
+                    <SectionHeader setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} />
                 </div>
                 <div className='app__header-description'>
                     <div className='app__header-description__text'>
@@ -26,16 +27,16 @@ let Home = (props: {width: number; setCartStorage: React.Dispatch<React.SetState
                             <button name="XX99 MARK II HEADPHONES" type="button" className="product-button">See Product</button>
                         </Link>
                     </div>
-                    {props.width > 1150 && <img src={Images.IntroHeadphones} alt="image" />}
+                    <img id="homeImage" src={Images.IntroHeadphones} alt="image" />
                 </div>
             </div>
             <div className='app__sections'>
                 <MiniSecContainer/>
-                <HomeBodySection width={props.width} />
-                <About width={props.width} />
+                <HomeBodySection  />
+                <About />
             </div>
             <div className='app__sections-footer'>
-                <Footer width={props.width} />
+                <Footer />
             </div>
         </div>
     );

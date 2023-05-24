@@ -18,3 +18,23 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
 }
+
+@media screen and (max-width: 1440px) {
+    .also-like-container {
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .also-like-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .also-like-parent {
+        margin-bottom: 10rem;
+    }
+
+    .also-like-parent h2 {
+        margin-bottom: 0;
+    }
+}

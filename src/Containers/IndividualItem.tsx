@@ -1,18 +1,18 @@
 import "../Design/CSS/ContainerStyles/IndividualItem.css";
 import "../Design/CSS/ContainerStyles/UniversalSectionStyles.css";
 import SectionHeader from "../Components/SectionHeader";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useMemo} from "react";
 import { Link, useLocation } from "react-router-dom";
 import AlsoLikeContainer from "./AlsoLikeContainer";
 import MiniSecContainer from "./MiniSecContainer";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import { specificDataObject, StorageObjectElement } from "../Data/Interface";
+import { Tick } from "../Design/General/export";
 
 // This container renders every individual product on the after click on "See Product" from any section
 // data and from are passed here dynamicaly by app.tsx 
 let IndividualItem = (props: {
-    width: number;
     data: specificDataObject; from: string;
     cartStorage: StorageObjectElement[];
     setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>;
@@ -20,10 +20,6 @@ let IndividualItem = (props: {
     const data = props.data;
     const from = props.from; 
     const location = useLocation();
-    // useffect resets value of items on location change
-    useEffect(() => {
-        setValue(1);
-    }, [location]);
     // State for quantity of product next to Add to cart button and event handlers for respective functions on button clicks
     const [value, setValue] = useState<number>(1);
     const handleIncrement = () => {
@@ -32,11 +28,33 @@ let IndividualItem = (props: {
     const handleDecrement = () => {
         {value > 1 && setValue(value - 1)}
     }
+    // State for window alert to show it or not
+    const [windowAlert, setWindowAlert] = useState(false);
+    // alert function that shows styled alert
+    const alert = () => {
+        return(
+            <div className="alert__window">
+                <img src={Tick} alt="tick" />
+                <span>Item added to your cart</span>
+            </div>
+        );
+    }
+    // global late initialized timer variable
+    let timer: any = null;
     // onClick function which updates the storage of cart. If product is already in cart it sums up total quantity
     // otherwise it adds another product in cart storage
     const AddToCart = () => {
+        // If else statement sets timeout function and assigns it to the timer variable if there is no timer present. if yes then it clears the timer meaning there won't be many alerts on the page.
+        if(windowAlert) {
+            clearTimeout(timer);
+            timer = null;
+        } else {
+            setWindowAlert(true);
+            timer = setTimeout(() => setWindowAlert(false), 1500);
+        }
+        // Declaring item variable with StorageObjectElement interface, and adding quantity to it's object keys
         const item: StorageObjectElement = {...data, quantity: value}
-        window.alert("Item added to your cart");
+        // this for loop sums up quantity of the item if it is already present. if not it adds it to the cart storage.
         for(let i in props.cartStorage) {
             if(props.cartStorage[i].h2 === item.h2) {
                 let temporarItem: StorageObjectElement = props.cartStorage[i];
@@ -50,19 +68,22 @@ let IndividualItem = (props: {
     }
     return(
         <div className="item-section">
-            {/* Section header is component defined in Components folder which creates section headers
-            that contains navigation logo and shopping cart icon, it's being used in individual section container
-            also in headphone speakers and earphones containers */}
+            {/* Showing window alert "item added to your cart" on Add to cart button click */}
+            {windowAlert && alert()}
             <div className="black-background">
-                <SectionHeader width={props.width} setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} />
+                {/* Section header is component defined in Components folder which creates section headers
+                that contains navigation logo and shopping cart icon, it's being used in individual section container
+                also in headphone speakers and earphones containers */}
+                <SectionHeader setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} />
             </div>
             <div className="item-section__body app__product-section">
+                {/* this button leads to the section where the item is coming from */}
                 <Link to={from}>
-                    <button className="go-back-button" type="button">Go Back</button>
+                    <button className="go-back-button go-back-button-tablet" type="button">Go Back</button>
                 </Link>
                 {/* Rendering based on database */}
                 <div className="app__product-body">
-                    <div className="app__product-body__product">
+                    <div className="app__product-body__product app__product-body__product-tablet">
                         <div className="product__image">
                             <img src={data.image} alt="headphone image" />
                         </div>
@@ -88,22 +109,27 @@ let IndividualItem = (props: {
                 <div className="item-section__features">
                     <div className="item-section__features-features">
                         <h2>Features</h2>
-                        {/* Mapping data from database which is given in arrays. at this instance features paragraphs are being rendered */}
+                        {/* Mapping data from database which is given in arrays. for this instance features paragraphs are being rendered */}
                         {data.features.map((item: string, key: number) => {
                             return <p key={key}>{item}</p>
                         })}
                     </div>
                     <div className="item-section__features-in-the-box">
-                        <h2>In The Box</h2>
+                        <div className="in-the-box-h2">
+                            <h2>In The Box</h2>
+                        </div>
                         {/* Rendering in the box items */}
-                        {data.inTheBox.map((item: string[], key: number) => {
-                            return (
-                                <div id="in-the-box" key={key}>
-                                    <h3>{item[0]}</h3>
-                                    <p>{item[1]}</p>
-                                </div>
-                            );
-                        })}
+                        <div className="in-the-box-items">
+                            {/* Mapping items in the box */}
+                            {data.inTheBox.map((item: string[], key: number) => {
+                                return (
+                                    <div className="in-the-box" key={key}>
+                                        <h3>{item[0]}</h3>
+                                        <p>{item[1]}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
                 <div className="decoration-images">
@@ -113,14 +139,15 @@ let IndividualItem = (props: {
                     <img id="image3" src={data.images[2]} alt="headphone image" />
                 </div>
                 <div className="item-section__sections">
-                    <AlsoLikeContainer data={data} />
+                    {/* Also like container is called in useMemo function to avoid unnecessary rerenders */}
+                    {useMemo(() => <AlsoLikeContainer data={data} />, [location])}
                     <MiniSecContainer />
                 </div>
                 <div className="item-section__about">
-                    <About width={props.width} />
+                    <About />
                 </div>
             </div>
-            <Footer width={props.width} />
+            <Footer />
         </div>
     );
 }

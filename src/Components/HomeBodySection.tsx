@@ -1,12 +1,10 @@
 import "../Design/CSS/ComponentStyles/HomeBodySection.css"
 import { Link } from "react-router-dom";
-import { BigEarphones } from "../Design/Homepage/export";
-import { TabletIntroEarphones } from "../Design/TabletStyles/export"
 
 // As name says this container is used to hold main concepts of homepage
 // earphones is image used on homepage
 // other images are used in css styles
-let HomeBodySection = (props: {width: number;}) => {
+let HomeBodySection = () => {
     return(
     <div className='app__sections-body'>
         <div id="speaker-top">
@@ -29,8 +27,8 @@ let HomeBodySection = (props: {width: number;}) => {
             </div>
         </div>
         <div id="earphones">
-            <div id="earphones-img">
-            </div>
+            {/* Div that contains image from CSS */}
+            <div id="earphones-img" />
             <div id='earphones__description'>
                 <div id="earphones__description-text">
                     <h1>YX1 EARPHONES</h1>

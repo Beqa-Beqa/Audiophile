@@ -7,54 +7,20 @@ import { Link } from "react-router-dom";
 import speakerData from "../Data/SpeakerData";
 import { StorageObjectElement, specificDataObject } from "../Data/Interface";
 
-let Speakers = (props: {width: number; setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>; cartStorage: StorageObjectElement[];}) => {
+let Speakers = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageObjectElement[]>>; cartStorage: StorageObjectElement[];}) => {
     return(
         <div className="page-style">
             <div className="black-background">
-                <SectionHeader width={props.width} setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} description="Speakers" />
+                <SectionHeader setCartStorage={props.setCartStorage} cartStorage={props.cartStorage} description="Speakers" />
             </div>
             <div className="app__product-section">
                 <div className="app__product-body">
                     {/* Mapping every item from speakers database. specificDataObject interface is defined in data/interfaces */}
                     {speakerData.map((item: specificDataObject, key) => {
-                            if(props.width > 1150) {
-                                if(item.index % 2 != 0) {
-                                    return (
-                                        // rendering elements based on speakers database. using conditional rendering if product is new or not
-                                        <div className="app__product-body__product" key={key}>
-                                            <div className="product__image">
-                                                <img src={item.image} alt="headphone image" />
-                                            </div>
-                                            <div className="product__description">
-                                                {item.newProduct && <span>NEW PRODUCT</span>}
-                                                <h2>{item.h2}</h2>
-                                                <p>{item.p}</p>
-                                                <Link to={item.h2}>
-                                                    <button name={item.h2} type="button" className="product-button">See Product</button>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    );
-                                } else {
-                                    return (
-                                        // reversing position of containers
-                                        <div className="app__product-body__product" key={key}>
-                                            <div className="product__description">
-                                                {item.newProduct && <span>NEW PRODUCT</span>}
-                                                <h2>{item.h2}</h2>
-                                                <p>{item.p}</p>
-                                                <Link to={item.h2}>
-                                                    <button name={item.h2} type="button" className="product-button">See Product</button>
-                                                </Link>
-                                            </div>
-                                            <div className="product__image">
-                                                <img src={item.image} alt="headphone image" />
-                                            </div>
-                                        </div>
-                                    );
-                                }
-                            } else {
-                                return(
+                        // If the item index is odd then the image will be on the left side
+                            if(item.index % 2 != 0) {
+                                return (
+                                    // rendering elements based on speakers database. using conditional rendering if product is new or not
                                     <div className="app__product-body__product" key={key}>
                                         <div className="product__image">
                                             <img src={item.image} alt="headphone image" />
@@ -69,15 +35,36 @@ let Speakers = (props: {width: number; setCartStorage: React.Dispatch<React.SetS
                                         </div>
                                     </div>
                                 );
+                            } else {
+                                // If the item index is even image will be on the right side
+                                return (
+                                    // reversing position of containers
+                                    <div className="app__product-body__product" key={key}>
+                                        <div className="product__image tablet-style-image">
+                                            <img src={item.image} alt="headphone image" />
+                                        </div>
+                                        <div className="product__description">
+                                            {item.newProduct && <span>NEW PRODUCT</span>}
+                                            <h2>{item.h2}</h2>
+                                            <p>{item.p}</p>
+                                            <Link to={item.h2}>
+                                                <button name={item.h2} type="button" className="product-button">See Product</button>
+                                            </Link>
+                                        </div>
+                                        <div className="product__image tablet-style-image-hidden">
+                                            <img src={item.image} alt="headphone image" />
+                                        </div>
+                                    </div>
+                                );
                             }
                         })}
                 </div>
                 <MiniSecContainer />
                 <div className="product-about">
-                    <About width={props.width} />
+                    <About />
                 </div>
             </div>
-            <Footer width={props.width} />
+            <Footer />
         </div>
     );
 }
