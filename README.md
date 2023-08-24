@@ -1,15 +1,19 @@
+## Introduction
 ![](https://github.com/Beqa-Beqa/web-todo-5-test/blob/master/Audiophile-banner.png)
 <hr/>
 <p>
   Welcome to Audiophile. This web application is built by "React", "React-router", "TS" and "CSS".
   The idea is about ecommerce application where you can see lots of variations of audio technic.
   <br/>
-  Live URL - https://beqa-beqa.github.io/web-todo-5-test/
-  <br/>
-  Figma URL - https://www.figma.com/file/2w091wUNv1HH9RDUmbuLut/audiophile-ecommerce-website?type=design&mode=design&t=0R5X9jVxCm8fdKet-0
+  
+  [Live URL](https://beqa-beqa.github.io/web-todo-5-test/) - Click here to visit the live application.  
+  
+  [Figma URL](https://www.figma.com/file/2w091wUNv1HH9RDUmbuLut/audiophile-ecommerce-website?type=design&mode=design&t=0R5X9jVxCm8fdKet-0) - Click here to view the Figma design.
 </p>
 <hr/>
-<h2>In this project you will see different sections such as</h2>
+
+## About project
+<h4>In this project you will see different sections such as</h4>
 <ul>
   <li>Headphones</li>
   <li>Speakers</li>
@@ -22,18 +26,30 @@
   Just make sure to enter information with correct format.
 </p>
 <hr/>
-<h2>To run the project on your local machine run the following</h2>
-<ul>
-  <li>npm install</li>
-  <li>npm start</li>
-</ul>
+
+## Set up on local machine
+
+<h4>To run the project on your local machine run the following in terminal</h4>
+
+```bash
+git clone https://github.com/Beqa-Beqa/web-todo-5-test.git  #clones the github repository on your machine
+
+#After successfull cloning
+
+npm install  #installs all neccessary dependencies on your initialized project
+    
+npm start  #starts the react app
+```
 <em>Make sure you have node installed.</em>
 <hr/>
+
+![Static Badge](https://img.shields.io/badge/Code%20Size-112.88mb-purple)
+
 <h2>License</h2>
 <p>
   MIT License
 
-  Copyright (c) [year] [fullname]
+  Copyright (c) [2023] [Beka Aladashvili]
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
