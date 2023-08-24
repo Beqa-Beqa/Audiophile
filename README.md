@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+![](https://github.com/Beqa-Beqa/web-todo-5-test/blob/master/Audiophile-banner.png)
+<hr/>
+<p>
+  Welcome to Audiophile. This web application is built by "React", "React-router", "TS" and "CSS".
+  The idea is about ecommerce application where you can see lots of variations of audio technic.
+  <br/>
+  Live URL - https://beqa-beqa.github.io/web-todo-5-test/
+  <br/>
+  Figma URL - https://www.figma.com/file/2w091wUNv1HH9RDUmbuLut/audiophile-ecommerce-website?type=design&mode=design&t=0R5X9jVxCm8fdKet-0
+</p>
+<hr/>
+<h2>In this project you will see different sections such as</h2>
+<ul>
+  <li>Headphones</li>
+  <li>Speakers</li>
+  <li>Earphones</li>
+</ul>
+<p>In each section there are given different products of a kind.</p>
+<p>
+  When you jump on checkout page, you can fill it with random information,
+  it's just for a visual view and you won't be ordering anything really.
+  Just make sure to enter information with correct format.
+</p>
+<hr/>
+<h2>To run the project on your local machine run the following</h2>
+<ul>
+  <li>npm install</li>
+  <li>npm start</li>
+</ul>
+<em>Make sure you have node installed.</em>
+<hr/>
+<h2>License</h2>
+<p>
+  MIT License
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Copyright (c) [year] [fullname]
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+</p>
