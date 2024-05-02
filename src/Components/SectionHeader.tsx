@@ -17,10 +17,10 @@ import { BlurElement } from "../App";
 export function navCreator() {
     return(
         <nav className="navigation">
-            <Link className='a' to="/web-todo-5-test/">Home</Link>
-            <Link className='a' to="/web-todo-5-test/headphones">Headphones</Link>
-            <Link className='a' to="/web-todo-5-test/speakers">Speakers</Link>
-            <Link className='a' to="/web-todo-5-test/earphones">Earphones</Link>
+            <Link className='a' to="/Audiophile/">Home</Link>
+            <Link className='a' to="/Audiophile/headphones">Headphones</Link>
+            <Link className='a' to="/Audiophile/speakers">Speakers</Link>
+            <Link className='a' to="/Audiophile/earphones">Earphones</Link>
         </nav>
     );
 }
@@ -64,7 +64,7 @@ let SectionHeader = (props: {showOrderDetails?: boolean; setShowOrderDetails?: R
                             <div key={key} className="cart-menu__body">
                                 <div className="body-description">
                                     <div className="cart-menu__body-image">
-                                        <img src={item.image} alt="product image" />
+                                        <img src={item.image} alt="product" />
                                     </div>
                                     <div className="cart-menu__body-description">
                                         {/* Showing only first word of item. Otherwise naming is very long and can't fit in */}
@@ -100,7 +100,7 @@ let SectionHeader = (props: {showOrderDetails?: boolean; setShowOrderDetails?: R
                         })}</h3>
                     </div>
                     {/* Link to checkout page */}
-                    <Link to="/web-todo-5-test/checkout">
+                    <Link to="/Audiophile/checkout">
                         <button type="button" className="product-button checkout-button">Checkout</button>
                     </Link>
                 </div>
@@ -137,10 +137,10 @@ let SectionHeader = (props: {showOrderDetails?: boolean; setShowOrderDetails?: R
                 <div className="app__section-header-nav">
                     {/* Tablet menu icon with it's functionality to show or not show tablet menu. Activating one deactivets another active state. order details and set show order details come from checkout container and is optional */}
                     <div id="miniMenu">
-                        <img onClick={() => {setTabletMenu(!tabletMenu); toggleCart && setToggleCart(false); {props.setShowOrderDetails && props.setShowOrderDetails(false)}}} src={ThreeLines} alt="toggle menu" />
+                        <img onClick={() => {setTabletMenu(!tabletMenu); toggleCart && setToggleCart(false); props.setShowOrderDetails && props.setShowOrderDetails(false)}} src={ThreeLines} alt="toggle menu" />
                     </div>
                     {/* Audiophile logo that goes to homepage */}
-                    <Link to="/web-todo-5-test">
+                    <Link to="/Audiophile">
                         <img id="logo" src={Audiophile} alt="logo" />
                     </Link>
                     {/* Navigation */}
@@ -150,7 +150,7 @@ let SectionHeader = (props: {showOrderDetails?: boolean; setShowOrderDetails?: R
                     {/* Shop cart icon with onclick listenre to show or not show cart menu. Activating one deactivates another active state. order details and set show order details comes from checkout container and is optional */}
                     <div id="shop-cart">
                         {totalNumberOfItems > 0 && <div id="number-of-items"><span>{totalNumberOfItems}</span></div>}
-                        <img onClick={() => {setToggleCart(!toggleCart); tabletMenu && setTabletMenu(false); {props.setShowOrderDetails && props.setShowOrderDetails(false)}}} src={ShoppingCart} alt="shopping cart" />
+                        <img onClick={() => {setToggleCart(!toggleCart); tabletMenu && setTabletMenu(false); props.setShowOrderDetails && props.setShowOrderDetails(false)}} src={ShoppingCart} alt="shopping cart" />
                     </div>
                 </div>
             {/* Conditional rendering whether or not to show tablet menu */}

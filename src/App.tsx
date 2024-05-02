@@ -32,22 +32,22 @@ function App() {
             <ScrollToTop>
                 {/* Declaring routes */}
                 <Routes>
-                    <Route path="/web-todo-5-test" element={ <Home setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
-                    <Route path="/web-todo-5-test/headphones" element={ <Headphones setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
-                    <Route path="/web-todo-5-test/speakers" element={<Speakers setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
-                    <Route path="/web-todo-5-test/earphones" element={<Earphones setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
+                    <Route path="/Audiophile" element={ <Home setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
+                    <Route path="/Audiophile/headphones" element={ <Headphones setCartStorage={setCartStorage} cartStorage={cartStorage} /> } />
+                    <Route path="/Audiophile/speakers" element={<Speakers setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
+                    <Route path="/Audiophile/earphones" element={<Earphones setCartStorage={setCartStorage} cartStorage={cartStorage} />} />
                     {/*Mapping routes based on database and giving necessary attributes to elements passing an item from data as "data" and
                     passing route from where that data coms as "from"*/}
                     {headphoneData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/web-todo-5-test/headphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from="/web-todo-5-test/headphones/" data={item} />} />
+                        <Route path={`/Audiophile/headphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from="/Audiophile/headphones/" data={item} />} />
                     ))}
                     {speakerData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/web-todo-5-test/speakers/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from='/web-todo-5-test/speakers/' data={item} />} />
+                        <Route path={`/Audiophile/speakers/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from='/Audiophile/speakers/' data={item} />} />
                     ))}
                     {earphoneData.map((item: specificDataObject, key: number) => (
-                        <Route path={`/web-todo-5-test/earphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from="/web-todo-5-test/earphones/" data={item} />} />
+                        <Route path={`/Audiophile/earphones/${item.h2}`} key={key} element={<IndividualItem cartStorage={cartStorage} setCartStorage={setCartStorage} from="/Audiophile/earphones/" data={item} />} />
                     ))}
-                    <Route path="/web-todo-5-test/checkout" element={<Checkout cartStorage={cartStorage} setCartStorage={setCartStorage} />} />
+                    <Route path="/Audiophile/checkout" element={<Checkout cartStorage={cartStorage} setCartStorage={setCartStorage} />} />
                 </Routes>
             </ScrollToTop>
         </div>

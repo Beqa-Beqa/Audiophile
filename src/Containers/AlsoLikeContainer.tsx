@@ -29,11 +29,11 @@ let AlsoLikeContainer = (props: {data: specificDataObject}) => {
     // This function corrects the path based on where the item is chosen from
     const setProperFromPath = (section: specificDataObject[]) => {
         if(section === headphoneData) {
-            return "/web-todo-5-test/headphones/";
+            return "/Audiophile/headphones/";
         } else if (section === speakerData) {
-            return "/web-todo-5-test/speakers/";
+            return "/Audiophile/speakers/";
         } else if (section === earphoneData) {
-            return "/web-todo-5-test/earphones/";
+            return "/Audiophile/earphones/";
         }
     }
     return (

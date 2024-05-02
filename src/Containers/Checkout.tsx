@@ -58,7 +58,7 @@ let Checkout = (props: {
                     {showOtherItems ? helperCartItems.current[0].map((item: StorageObjectElement, key: number) => (
                             <div key={key} className="body-description">
                                 <div className="cart-menu__body-image">
-                                    <img src={item.image} alt="product image" />
+                                    <img src={item.image} alt="product" />
                                 </div>
                                 <div className="cart-menu__body-description">
                                     {/* Showing only first word of item's name */}
@@ -75,7 +75,7 @@ let Checkout = (props: {
                         <div className="body-description">
                             {/* If otheritems state is set on false this will render details of only fisrt item from helpercartitems stored in useRef */}
                             <div className="cart-menu__body-image">
-                                <img src={helperCartItems.current[0][0].image} alt="product image" />
+                                <img src={helperCartItems.current[0][0].image} alt="product" />
                             </div>
                             <div className="cart-menu__body-description">
                                 <h2>{helperCartItems.current[0][0].h2.replace(/ .*/,'')}</h2>
@@ -101,7 +101,7 @@ let Checkout = (props: {
             </div>
             <div id="order-button-div">
                 {/* Back to home button leads to homepage */}
-                <Link to="/web-todo-5-test">
+                <Link to="/Audiophile">
                     <button type="button" className="product-button checkout-button">Back to home</button>
                 </Link>
             </div>
@@ -171,7 +171,7 @@ let Checkout = (props: {
             <div className="checkout__body">
                 <div className="checkout__body-checkout">
                     {/* button that leads to homepage */}
-                    <Link to="/web-todo-5-test">
+                    <Link to="/Audiophile">
                         <button className="go-back-button" type="button">Go Back</button>
                     </Link>
                     <div className="checkout__body-details">
@@ -298,7 +298,7 @@ let Checkout = (props: {
                                 <div key={key} className="cart-menu__body">
                                     <div className="body-description">
                                         <div className="cart-menu__body-image">
-                                            <img src={item.image} alt="product image" />
+                                            <img src={item.image} alt="product" />
                                         </div>
                                         <div className="cart-menu__body-description">
                                             <h2>{item.h2.replace(/ .*/,'')}</h2>

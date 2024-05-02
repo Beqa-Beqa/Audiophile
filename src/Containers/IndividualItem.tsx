@@ -1,7 +1,7 @@
 import "../Design/CSS/ContainerStyles/IndividualItem.css";
 import "../Design/CSS/ContainerStyles/UniversalSectionStyles.css";
 import SectionHeader from "../Components/SectionHeader";
-import {useState, useEffect, useMemo} from "react";
+import {useState, useMemo} from "react";
 import { Link, useLocation } from "react-router-dom";
 import AlsoLikeContainer from "./AlsoLikeContainer";
 import MiniSecContainer from "./MiniSecContainer";
@@ -25,9 +25,7 @@ let IndividualItem = (props: {
     const handleIncrement = () => {
         setValue(value + 1);
     }
-    const handleDecrement = () => {
-        {value > 1 && setValue(value - 1)}
-    }
+    const handleDecrement = () => value > 1 && setValue(value - 1);
     // State for window alert to show it or not
     const [windowAlert, setWindowAlert] = useState(false);
     // alert function that shows styled alert
@@ -85,7 +83,7 @@ let IndividualItem = (props: {
                 <div className="app__product-body">
                     <div className="app__product-body__product app__product-body__product-tablet">
                         <div className="product__image">
-                            <img src={data.image} alt="headphone image" />
+                            <img src={data.image} alt="headphone" />
                         </div>
                         <div className="product__description">
                             {data.newProduct && <span>NEW PRODUCT</span>}
@@ -134,9 +132,9 @@ let IndividualItem = (props: {
                 </div>
                 <div className="decoration-images">
                     {/* Rendering images from data */}
-                    <img id="image1" src={data.images[0]} alt="human image" />
-                    <img id="image2" src={data.images[1]} alt="headphone image" />
-                    <img id="image3" src={data.images[2]} alt="headphone image" />
+                    <img id="image1" src={data.images[0]} alt="human" />
+                    <img id="image2" src={data.images[1]} alt="headphone" />
+                    <img id="image3" src={data.images[2]} alt="headphone" />
                 </div>
                 <div className="item-section__sections">
                     {/* Also like container is called in useMemo function to avoid unnecessary rerenders */}

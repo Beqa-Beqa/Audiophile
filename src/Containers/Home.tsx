@@ -23,11 +23,11 @@ let Home = (props: {setCartStorage: React.Dispatch<React.SetStateAction<StorageO
                         <h1>XX99 Mark II<br/>Headphones</h1>
                         <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                         {/* Setting link to the path of item which it represents */}
-                        <Link to="/web-todo-5-test/headphones/XX99 MARK II HEADPHONES">
+                        <Link to="/Audiophile/headphones/XX99 MARK II HEADPHONES">
                             <button name="XX99 MARK II HEADPHONES" type="button" className="product-button">See Product</button>
                         </Link>
                     </div>
-                    <img id="homeImage" src={Images.IntroHeadphones} alt="image" />
+                    <img id="homeImage" src={Images.IntroHeadphones} alt="headphones" />
                 </div>
             </div>
             <div className='app__sections'>

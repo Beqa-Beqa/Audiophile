@@ -10,7 +10,7 @@ let AlsoLikeSingle = (props: {from: string | undefined, itemData: specificDataOb
     return (
         <div className="also-like__single">
             <div className="also-like__single-image">
-                <img src={props.itemData.image} alt="headphone image" />
+                <img src={props.itemData.image} alt="headphone" />
             </div>
             <div className="also-like__single-description">
                 <h2>{props.itemData.h2}</h2>

@@ -18,12 +18,12 @@ let Headphones = (props: {setCartStorage: React.Dispatch<React.SetStateAction<St
                     {/* Mapping data from headphones. specificDataObject interface is defined in data/interface */}
                     {headphoneData.map((item: specificDataObject, key) => {
                         // If the index is odd image will be on the left side
-                            if(item.index % 2 != 0) {
+                            if(item.index % 2 !== 0) {
                                 return (
                                     // rendering elements based on speakers database. using conditional rendering if product is new or not
                                     <div className="app__product-body__product" key={key}>
                                         <div className="product__image">
-                                            <img src={item.image} alt="headphone image" />
+                                            <img src={item.image} alt="headphone" />
                                         </div>
                                         <div className="product__description">
                                             {item.newProduct && <span>NEW PRODUCT</span>}
@@ -41,7 +41,7 @@ let Headphones = (props: {setCartStorage: React.Dispatch<React.SetStateAction<St
                                     // reversing position of containers
                                     <div className="app__product-body__product" key={key}>
                                         <div className="product__image tablet-style-image">
-                                            <img src={item.image} alt="headphone image" />
+                                            <img src={item.image} alt="headphone" />
                                         </div>
                                         <div className="product__description">
                                             {item.newProduct && <span>NEW PRODUCT</span>}
@@ -52,7 +52,7 @@ let Headphones = (props: {setCartStorage: React.Dispatch<React.SetStateAction<St
                                             </Link>
                                         </div>
                                         <div className="product__image tablet-style-image-hidden">
-                                            <img src={item.image} alt="headphone image" />
+                                            <img src={item.image} alt="headphone" />
                                         </div>
                                     </div>
                                 );
