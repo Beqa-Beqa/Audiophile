@@ -1,12 +1,12 @@
 ## Introduction
-![](https://github.com/Beqa-Beqa/web-todo-5-test/blob/master/Audiophile-banner.png)
+![](https://github.com/Beqa-Beqa/Audiophile/blob/master/Audiophile-banner.png)
 <hr/>
 <p>
   Welcome to Audiophile. This web application is built by "React", "React-router", "TS" and "CSS".
   The idea is about ecommerce application where you can see lots of variations of audio technic.
   <br/>
   
-  [Live URL](https://beqa-beqa.github.io/web-todo-5-test/) - Click here to visit the live application.  
+  [Live URL](https://beqa-beqa.github.io/Audiophile/) - Click here to visit the live application.  
   
   [Figma URL](https://www.figma.com/file/2w091wUNv1HH9RDUmbuLut/audiophile-ecommerce-website?type=design&mode=design&t=0R5X9jVxCm8fdKet-0) - Click here to view the Figma design.
 </p>
