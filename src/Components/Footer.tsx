@@ -19,7 +19,7 @@ let Footer = () => {
                         <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
                     </div>
                     <div className="flex-group group-2">
-                        <span>Copyright 2021. All Rights Reserved</span>
+                        <span>Copyright 2025. All Rights Reserved</span>
                         <div id="icons">
                             <img src={Fb} alt="facebook icon" />
                             <img src={Twit} alt="twitter icon" />
